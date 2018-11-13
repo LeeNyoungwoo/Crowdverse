@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Column, Row } from "simple-flexbox";
-import Tabs from "./../Tabs";
+import Tabs from "../Tabs";
 import SourceBox from "components/eventpage/SourceBox";
+import QnABox from "components/eventpage/QnABox";
 import VerticalHr from "components/VerticalHr";
 import classNames from "classnames";
 import "./Event.css";
@@ -45,7 +46,7 @@ class Event extends Component {
               </Column>
               <VerticalHr width={"1"} height={"500"} />
               <Column flexGrow={1} horizontal="center">
-                <SourceBox
+                <QnABox
                   width={this.state.width * 0.4}
                   height={this.state.height * 0.8}
                 />

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import classNames from "classnames";
 
 class sourceBox extends Component {
   render() {
     return (
-      <div>
-        <hr />
+      <div className={classNames("container")}>
+        <hr/>
       </div>
     );
   }
