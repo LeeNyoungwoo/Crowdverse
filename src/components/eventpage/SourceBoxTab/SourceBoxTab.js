@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import VerticalHr from "components/VerticalHr";
+import { VerticalHr } from "pages/index.async.js";
 import { Column, Row } from "simple-flexbox";
 import classNames from "classnames";
 import "./SourceBoxTab.scss";
@@ -11,6 +11,7 @@ class SourceBoxTab extends Component {
 
   render() {
     const { onTabClick, onClickToStore } = this.props;
+    const Hr = <VerticalHr height={"20"} />;
     // console.log(this.state.currentTab);
     // const paddingSide = boxWidth / 8;
     return (
@@ -36,7 +37,7 @@ class SourceBoxTab extends Component {
                 All
               </div>
             </Column>
-            <VerticalHr width={"1"} height={"15"} />
+           {Hr}
             <Column
               className="column"
               flexGrow={1}
@@ -58,7 +59,7 @@ class SourceBoxTab extends Component {
                 Official
               </div>
             </Column>
-            <VerticalHr width={"1"} height={"15"} />
+            {Hr}
             <Column
               className="column"
               flexGrow={1}

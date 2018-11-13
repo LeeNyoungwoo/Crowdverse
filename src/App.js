@@ -32,7 +32,7 @@ class App extends Component {
         </Switch>
         {/* <Route path="/about/:name?" component={About} /> */}
         {/*<Route path="/tabs" component={Tabs} />*/}
-        <ShowPageInfo />
+        {/*<ShowPageInfo />*/}
       </div>
     );
   }

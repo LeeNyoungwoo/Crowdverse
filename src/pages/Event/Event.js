@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import { Column, Row } from "simple-flexbox";
-import Tabs from "../Tabs";
-import SourceBox from "components/eventpage/SourceBox";
-import QnABox from "components/eventpage/QnABox";
-import VerticalHr from "components/VerticalHr";
+import { SourceBox, QnABox, VerticalHr } from "pages/index.async.js";
 import classNames from "classnames";
-import "./Event.css";
+import "./Event.scss";
 
 class Event extends Component {
   constructor(props) {
@@ -35,7 +32,7 @@ class Event extends Component {
           Screen Size: width={this.state.width} height={this.state.height}
         </h1>
         <h2>Event {match.params.name}</h2>
-        <div className={classNames("container")}>
+        <div className={classNames("eventpage_container")}>
           <Column flexGrow={1}>
             <Row vertical="center">
               <Column flexGrow={1} horizontal="center">
@@ -44,7 +41,7 @@ class Event extends Component {
                   height={this.state.height * 0.8}
                 />
               </Column>
-              <VerticalHr width={"1"} height={"500"} />
+              <VerticalHr height={"500"} />
               <Column flexGrow={1} horizontal="center">
                 <QnABox
                   width={this.state.width * 0.4}

@@ -1,13 +1,26 @@
 import React, { Component } from "react";
+import "./SourceBoxListItem.scss";
 
-class sourceBox extends Component {
+// event: "event1",
+// sourceTab: "official",
+// imageSrc: "scr",
+// title: "official_title_1",
+// content: "content",
+// poster: "poster",
+// date: "date"
+class SourceBoxListItem extends Component {
   render() {
+    const { data } = this.props;
     return (
       <div>
-        <hr />
+        <div>
+          <div>{data.imageSrc}</div>
+          <div>{data.title}</div>
+          <div>{data.content}</div>
+        </div>
       </div>
     );
   }
 }
 
-export default sourceBox;
+export default SourceBoxListItem;

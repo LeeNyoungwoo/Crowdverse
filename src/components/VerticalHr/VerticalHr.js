@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./VerticalHr.css";
+import "./VerticalHr.scss";
 
 class VerticalHr extends Component {
   render() {
-    const { width, height } = this.props;
-    return <hr width={width} size={height} />;
+    const { height } = this.props;
+    return <hr size={height}/>;
   }
 }
 
