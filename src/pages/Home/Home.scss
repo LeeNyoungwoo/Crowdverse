@@ -1,0 +1,118 @@
+.upperBox {
+  width: 80%;
+  height: 230px;
+  justify-content: space-between;
+	background-color: #BDBDBD;
+	margin: auto;
+}
+.upperBoxTitle {
+	color: black;
+	display: table-cell;
+	font-weight: bold;
+	font-size: 50px;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+.upperBoxContent {
+	color: black;
+	font-size: 25px;
+	padding-top: 5px;
+	padding-left: 30px;
+}
+.boxText {
+	width: 80%;
+	height: 100px;
+	justify-content: space-between;
+	padding-top: 40px;
+	margin:auto;
+}
+.boxTextStyle {
+  display: inline-table;
+  padding-left: 5px;
+	font-size: 23px;
+}
+.boxNumStyle {
+  display: inline-table;
+  padding-left: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	color: red;
+}
+.nationalBox {
+  width: 80%;
+  height: 150px;
+	margin: auto;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	background-color: white;
+}
+.nationalFlagBox {
+	width: 265px;
+  text-align: center;
+  display: inline-table;
+	height: 150px;
+	background-color: white;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+.nationalFlagImg{
+	height: 80px;
+	width: 200px;
+  display: inline-table;
+	background-color: black;
+}
+.nationalFlagText1 {
+	padding-top: 10px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+.nationalFlagText2 {
+	margin-top: 5px;
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+  display: inline-table;
+}
+.nationalFlagText3 {
+	padding-left: 10px;
+	margin-top: 5px;
+	font-size: 20px;
+	text-align: center;
+  display: inline-table;
+}
+.hrStyle {
+	margin: auto;
+	margin-bottom: 40px; 
+}
+.eventBox {
+  width: 80%;
+  height: 210px;
+	margin: auto;
+	justify-content: space-between;
+}
+.eventCategoryBox {
+	width: 300px;
+  text-align: center;
+  display: inline-table;
+	height: 210px;
+	background-color: #EEEEEE;
+}
+.eventCategoryText1 {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+.eventCategoryText2 {
+	font-size: 20px;
+	margin-top: 10px;
+}
+.eventLeft {
+	margin-left: 30px;
+}
+.eventRight {
+	margin-right: 30px;
+}

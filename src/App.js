@@ -9,6 +9,7 @@ import {
 import { Menu } from "components";
 import Counter from "components/Counter";
 import ShowPageInfo from "components/ShowPageInfo";
+import Header from "components/Header/Header";
 
 class App extends Component {
   state = {
@@ -24,6 +25,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         <Menu />
         <Route exact path="/" component={Home} />
         <Switch>

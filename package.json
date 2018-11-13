@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< Updated upstream
     "@babel/core": "7.1.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.2",
     "@babel/plugin-syntax-jsx": "^7.0.0",
     "@svgr/webpack": "2.4.1",
+=======
+    "@material-ui/core": "^3.4.0",
+    "@material-ui/icons": "^3.0.1",
+>>>>>>> Stashed changes
     "autoprefixer": "7.1.6",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
