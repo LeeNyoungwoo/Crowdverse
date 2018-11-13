@@ -7,6 +7,7 @@ import {
   OptionalComponent
 } from "pages/index.async.js";
 import { Menu } from "components";
+import Counter from "components/Counter";
 import ShowPageInfo from "components/ShowPageInfo";
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
     return (
       <div>
         <Menu />
+        <Counter />
         {this.state.OptionalComponent && (
           <OptionalComponent />
         ) /* OptionalComponent 가 유효하면 렌더링 */}

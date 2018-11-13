@@ -1,8 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Root from './Root';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Root from "./Root";
+import { Provider } from "mobx-react";
+import RootStore from "./stores";
+import registerServiceWorker from "./registerServiceWorker";
+import "./index.css";
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+const roots = new  RootStore();
+
+ReactDOM.render(
+  <Provider {...roots}>
+    <Root />
+  </Provider>,
+  document.getElementById("root")
+);
 registerServiceWorker();
