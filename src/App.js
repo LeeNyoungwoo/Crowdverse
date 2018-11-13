@@ -25,11 +25,6 @@ class App extends Component {
     return (
       <div>
         <Menu />
-        <Counter />
-        {this.state.OptionalComponent && (
-          <OptionalComponent />
-        ) /* OptionalComponent 가 유효하면 렌더링 */}
-        <button onClick={this.showOptionalComponent}>ClickMe</button>
         <Route exact path="/" component={Home} />
         <Switch>
           <Route path="/perspective/:name" component={Perspective} />
@@ -42,5 +37,11 @@ class App extends Component {
     );
   }
 }
+
+// <Counter />
+// {this.state.OptionalComponent && (
+//   <OptionalComponent />
+// ) /* OptionalComponent 가 유효하면 렌더링 */}
+// <button onClick={this.showOptionalComponent}>ClickMe</button>
 
 export default App;
