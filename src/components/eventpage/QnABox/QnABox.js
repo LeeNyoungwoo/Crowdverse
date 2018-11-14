@@ -1,66 +1,30 @@
 import React, { Component } from "react";
 import { QnABoxItemPush, QnABoxList } from "pages/index.async.js";
 import "./QnABox.scss";
+import { observer, inject } from "mobx-react";
 
 //description for DB data
 //need one kind of retrieve api call: 1. get all data list
 //need two kinds of insertion(modification) api call: 1. push the new question 2. push the answer on existing question data
 // ...
 
-const sampleListData = [
-  {
-    event: "event1",
-    questionContent: "content1",
-    answerList: [
-      {
-        answerContent: "answer1",
-        upvote: 13,
-        ansPoster: "ans_poster",
-        ansDate: "ans_date" //format: "10/3/2018 오후 9:10:40"
-      }
-    ],
-    questionPoster: "qst_poster",
-    questionDate: "qst_date" //format: "10/3/2018 오후 9:10:40"
-  },
-  {
-    event: "event1",
-    questionContent: "content2",
-    answerList: [
-      {
-        answerContent: "answer1",
-        upvote: 10,
-        ansPoster: "ans_poster",
-        ansDate: "ans_date"
-      },
-      {
-        answerContent: "answer2",
-        upvote: 10,
-        ansPoster: "ans_poster",
-        ansDate: "ans_date"
-      }
-    ],
-    questionPoster: "qst_poster",
-    questionDate: "qst_date"
-  },
-  {
-    event: "event1",
-    questionContent: "content3",
-    answerList: [
-      {
-        answerContent: "answer1",
-        upvote: 5,
-        ansPoster: "ans_poster",
-        ansDate: "ans_date"
-      }
-    ],
-    questionPoster: "qst_poster",
-    questionDate: "qst_date"
+@inject("eventpage")
+@observer
+class QnABox extends Component {
+  componentWillMount() {
+    //get datalist from db and add it to the eventpage.currentQnADataList by using eventpage.updateCurrentQnADataList function
+    // eventpage.updateCurrentQnADataList(datalist from db)
   }
-];
 
-class sourceBox extends Component {
+  componentDidUpdate() {
+    //push store data to the db using eventpage.getCurrentQnADataList()
+    // pushToDB(targetDataList: eventpage.getCurrentQnADataList())
+  }
+
   render() {
     const { width, height } = this.props;
+    const { eventpage } = this.props;
+
     return (
       <div style={{ width: width, height: height }}>
         <div className="header">
@@ -79,10 +43,10 @@ class sourceBox extends Component {
         <div>
           <QnABoxItemPush qnaBoxWidth={width} />
         </div>
-        <QnABoxList dataList={sampleListData} width={width}/>
+        <QnABoxList dataList={eventpage.currentQnADataList} width={width} />
       </div>
     );
   }
 }
 
-export default sourceBox;
+export default QnABox;
