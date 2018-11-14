@@ -4,11 +4,8 @@ import {
   Home,
   Perspective,
   Event,
-  OptionalComponent
 } from "pages/index.async.js";
 import { Menu } from "components";
-import Counter from "components/Counter";
-import ShowPageInfo from "components/ShowPageInfo";
 
 class App extends Component {
   state = {

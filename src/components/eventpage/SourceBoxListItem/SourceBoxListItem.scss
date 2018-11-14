@@ -1,0 +1,48 @@
+.source_box_list_item_conta {
+  .item_wrapper {
+    cursor: pointer;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    // align-items: center;
+  }
+
+  .image_box {
+    color: black;
+    width: 130px;
+    height: 130px;
+  }
+
+  .text_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .content_box {
+      .title {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .content {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: gray;
+      }
+    }
+    .info_box {
+      color: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      &_poster {
+        margin-right: 20px;
+      }
+
+      &_date {
+      }
+    }
+  }
+}

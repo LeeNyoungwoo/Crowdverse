@@ -1,19 +1,23 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import classNames from "classnames";
 import "./SourceBoxItemPush.scss";
 
 class SourceBoxItemPush extends Component {
+  sampleAlert = message => {
+    alert(`Hello! I am an alert box!!\nmessage: ${message}`);
+  };
+
   render() {
     const { currentTab } = this.props;
     return (
-      <Link to={`/event/${currentTab}`}>
-        <div className={classNames("source_box_item_push_container")}>
-          <div className="plus">
-            <span>+</span>
-          </div>
+      <div
+        className={classNames("source_box_item_push_container")}
+        onClick={() => this.sampleAlert(currentTab)}
+      >
+        <div className="plus">
+          <span>+</span>
         </div>
-      </Link>
+      </div>
     );
   }
 }
