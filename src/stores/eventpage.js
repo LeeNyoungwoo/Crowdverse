@@ -14,11 +14,6 @@ import { observable, action } from "mobx";
 //  }, ...
 // you can check details by usage of sampleListData below.
 
-//description for DB data: currentQnADataList
-//need one kind of retrieve api call: 1. get all data list
-//need two kinds of insertion(modification) api call: 1. push the new question 2. push the answer on existing question data
-// ...
-
 export default class EventPageStore {
   constructor(root) {
     this.root = root;
@@ -138,6 +133,7 @@ export default class EventPageStore {
   @observable currentQnADataList = [
     {
       event: "event1",
+      qIndex: 0,
       questionContent: "content1",
       answerList: [
         {
@@ -152,6 +148,7 @@ export default class EventPageStore {
     },
     {
       event: "event1",
+      qIndex: 1,
       questionContent: "content2",
       answerList: [
         {
@@ -172,6 +169,7 @@ export default class EventPageStore {
     },
     {
       event: "event1",
+      qIndex: 2,
       questionContent: "content3",
       answerList: [
         {
@@ -188,11 +186,37 @@ export default class EventPageStore {
 
   @action
   updateCurrentQnADataList = currentQnADataList => {
-    this.currentcurrentQnADataList = currentQnADataList;
+    this.currentQnADataList = currentQnADataList;
   };
 
   @action
   getCurrentQnADataList = () => {
-    return this.currentcurrentQnADataList;
+    return this.currentQnADataList;
+  };
+
+  @action
+  addNewQuestion = (event, questionContent, questionPoster, questionDate) => {
+    this.currentQnADataList.push({
+      event: event,
+      qIndex: this.currentQnADataList.length,
+      questionContent: questionContent,
+      answerList: [],
+      questionPoster: questionPoster,
+      questionDate: questionDate
+    });
+  };
+
+  @action
+  addNewAnswer = (qIndex, answerContent, ansPoster, ansDate) => {
+    this.currentQnADataList.map(data =>
+      data.qIndex === qIndex
+        ? data.answerList.push({
+            answerContent: answerContent,
+            upvote: 0,
+            ansPoster: ansPoster,
+            ansDate: ansDate
+          })
+        : null
+    );
   };
 }

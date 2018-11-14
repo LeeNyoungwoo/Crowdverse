@@ -12,11 +12,11 @@ class SourceBoxItemPush extends Component {
   };
 
   render() {
-    const { currentTab } = this.props;
+    const { currentTab,  eventName, forceUpdate } = this.props;
     return (
       <div
         className={classNames("source_box_item_push_container")}
-        onClick={() => this.sampleAlert(currentTab)}
+        onClick={() => this.sampleAlert(currentTab)} //여기서 모달로 currentTab,  eventName, forceUpdate 전부 전달해줘야함!
         onMouseEnter={() => this.setState({ isHovered: true })}
         onMouseLeave={() => this.setState({ isHovered: false })}
       >

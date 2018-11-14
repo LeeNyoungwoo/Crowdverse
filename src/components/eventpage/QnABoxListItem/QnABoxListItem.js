@@ -29,7 +29,7 @@ class QnABoxListItem extends Component {
   }
 
   render() {
-    const { data, width } = this.props;
+    const { data, width, forceUpdate } = this.props;
     const iconSize = 25;
 
     return (
@@ -51,7 +51,7 @@ class QnABoxListItem extends Component {
             </div>
             <div className={classNames("question_content")}>
               <div className={classNames("question_title")}>
-                <span>Q: {data.questionContent}</span>
+                <span>Q{data.qIndex+1}: {data.questionContent}</span>
               </div>
               <div className={classNames("question_info")}>
                 <div className={classNames("question_info--poster")}>
@@ -64,9 +64,11 @@ class QnABoxListItem extends Component {
             </div>
           </div>
           <QnABoxAnswerBox
+            qIndex={data.qIndex}
             answerDataList={data.answerList}
             isUnfoled={this.state.isUnfoled}
             width={width}
+            forceUpdate={forceUpdate}
           />
         </div>
       </div>

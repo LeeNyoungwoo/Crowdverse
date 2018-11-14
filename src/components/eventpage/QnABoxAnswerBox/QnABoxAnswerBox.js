@@ -13,7 +13,13 @@ import "./QnABoxAnswerBox.scss";
 
 class QnABoxAnswerBox extends Component {
   render() {
-    const { answerDataList, isUnfoled, width } = this.props;
+    const {
+      qIndex,
+      answerDataList,
+      isUnfoled,
+      width,
+      forceUpdate
+    } = this.props;
     const answerBoxWidth = width * 0.9;
     return (
       <div className={classNames("answer_box_container")}>
@@ -28,7 +34,11 @@ class QnABoxAnswerBox extends Component {
               ))
             : null}
           {isUnfoled ? (
-            <QnABoxAnswerBoxItemPush width={answerBoxWidth} />
+            <QnABoxAnswerBoxItemPush
+              qIndex={qIndex}
+              width={answerBoxWidth}
+              forceUpdate={forceUpdate}
+            />
           ) : null}
         </div>
       </div>

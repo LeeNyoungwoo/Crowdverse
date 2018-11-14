@@ -3,11 +3,6 @@ import { QnABoxItemPush, QnABoxList } from "pages/index.async.js";
 import "./QnABox.scss";
 import { observer, inject } from "mobx-react";
 
-//description for DB data
-//need one kind of retrieve api call: 1. get all data list
-//need two kinds of insertion(modification) api call: 1. push the new question 2. push the answer on existing question data
-// ...
-
 @inject("eventpage")
 @observer
 class QnABox extends Component {
@@ -21,8 +16,12 @@ class QnABox extends Component {
     // pushToDB(targetDataList: eventpage.getCurrentQnADataList())
   }
 
+  forceUpdateQnABox = () => {
+    this.forceUpdate();
+  }
+
   render() {
-    const { width, height } = this.props;
+    const { eventName, width, height } = this.props;
     const { eventpage } = this.props;
 
     return (
@@ -41,9 +40,9 @@ class QnABox extends Component {
           </span>
         </div>
         <div>
-          <QnABoxItemPush qnaBoxWidth={width} />
+          <QnABoxItemPush qnaBoxWidth={width} eventName={eventName} forceUpdate={this.forceUpdateQnABox}/>
         </div>
-        <QnABoxList dataList={eventpage.currentQnADataList} width={width} />
+        <QnABoxList dataList={eventpage.currentQnADataList} width={width} forceUpdate={this.forceUpdateQnABox}/>
       </div>
     );
   }

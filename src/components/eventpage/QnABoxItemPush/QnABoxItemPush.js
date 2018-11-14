@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import autosize from "autosize";
 import "./QnABoxItemPush.scss";
+import { observer, inject } from "mobx-react";
 
+@inject("eventpage")
+@inject("userinfo")
+@observer
 class QnABoxItemPush extends Component {
   state = {
     value: ""
@@ -24,8 +28,24 @@ class QnABoxItemPush extends Component {
     return currentDate;
   };
 
+  handleSubmit = (
+    eventpage,
+    event,
+    questionContent,
+    questionPoster,
+    questionDate
+  ) => {
+    eventpage.addNewQuestion(
+      event,
+      questionContent,
+      questionPoster,
+      questionDate
+    );
+  };
+
   render() {
-    const { qnaBoxWidth } = this.props;
+    const { eventName, qnaBoxWidth, forceUpdate } = this.props;
+    const { eventpage, userinfo } = this.props;
     return (
       <div className={classNames("qna_box_item_push_container")}>
         <form className={classNames("form")} onSubmit={this.handleSubmit}>
@@ -39,7 +59,21 @@ class QnABoxItemPush extends Component {
               ref={c => (this.textarea = c)}
             />
           </div>
-          <div className={classNames("button_box")}>
+          <div
+            className={classNames("button_box")}
+            onClick={() => {
+              this.handleSubmit(
+                eventpage,
+                eventName,
+                this.state.value,
+                userinfo.getUserId(),
+                this.getCurrentTimeInFormat()
+              );
+              forceUpdate();
+              this.setState({value:""})
+              this.textarea.focus();
+            }}
+          >
             <div className={classNames("button")}>Submit</div>
           </div>
         </form>

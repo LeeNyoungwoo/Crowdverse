@@ -38,6 +38,7 @@ class Event extends Component {
             <Row vertical="center">
               <Column flexGrow={1} horizontal="center">
                 <SourceBox
+                  eventName={match.params.name}
                   width={this.state.width * 0.4}
                   height={this.state.height * 0.8}
                 />
@@ -45,6 +46,7 @@ class Event extends Component {
               <VerticalHr height={"700"} />
               <Column flexGrow={1} horizontal="center">
                 <QnABox
+                  eventName={match.params.name}
                   width={this.state.width * 0.4}
                   height={this.state.height * 0.8}
                 />

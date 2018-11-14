@@ -35,6 +35,10 @@ class SourceBox extends Component {
     // pushToDB(targetDataList: eventpage.getCurrentSourceDataList())
   }
 
+  forceUpdateSourceBox = () => {
+    this.forceUpdate();
+  }
+
   //store있어서 딱히 필요하진 않음
   handleTabClick = clickedTab => {
     this.setState({ currentTab: clickedTab });
@@ -55,7 +59,7 @@ class SourceBox extends Component {
   };
 
   render() {
-    const { width, height } = this.props;
+    const { eventName, width, height } = this.props;
     const { eventpage } = this.props;
     const currentTab = eventpage.currentTab;
     const originDataList = eventpage.currentSourceDataList;
@@ -79,7 +83,7 @@ class SourceBox extends Component {
           onTabClick={this.handleTabClick}
           onClickToStore={eventpage.updateCurrentTab}
         />
-        <SourceBoxItemPush currentTab={currentTab} />
+        <SourceBoxItemPush currentTab={currentTab} eventName={eventName} forceUpdate={this.forceUpdateSourceBox}/>
         <SourceBoxList dataList={dataList} />
       </div>
     );

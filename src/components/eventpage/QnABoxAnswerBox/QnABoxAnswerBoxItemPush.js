@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import autosize from 'autosize';
+import autosize from "autosize";
 import "./QnABoxAnswerBoxItemPush.scss";
+import { observer, inject } from "mobx-react";
 
+@inject("eventpage")
+@inject("userinfo")
+@observer
 class QnABoxAnswerBoxItemPush extends Component {
   state = {
-    value: "",
+    value: ""
   };
 
   componentDidMount() {
@@ -24,8 +28,14 @@ class QnABoxAnswerBoxItemPush extends Component {
     return currentDate;
   };
 
+  handleSubmit = (eventpage, qIndex, answerContent, ansPoster, ansDate) => {
+    eventpage.addNewAnswer(qIndex, answerContent, ansPoster, ansDate);
+  };
+
   render() {
-    const { width } = this.props;
+    const { qIndex, width, forceUpdate } = this.props;
+    const { eventpage, userinfo } = this.props;
+
     return (
       <div
         className={classNames("answer_item_push_container")}
@@ -39,10 +49,24 @@ class QnABoxAnswerBoxItemPush extends Component {
               placeholder=" Add a answer comment!"
               value={this.state.value}
               onChange={event => this.handleChange(event)}
-              ref={c=>this.textarea=c}
+              ref={c => (this.textarea = c)}
             />
           </div>
-          <div className={classNames("button_box")}>
+          <div
+            className={classNames("button_box")}
+            onClick={() => {
+              this.handleSubmit(
+                eventpage,
+                qIndex,
+                this.state.value,
+                userinfo.getUserId(),
+                this.getCurrentTimeInFormat()
+              );
+              forceUpdate();
+              this.setState({value:""})
+              this.textarea.focus();
+            }}
+          >
             <div className={classNames("button")}>Add</div>
           </div>
         </form>

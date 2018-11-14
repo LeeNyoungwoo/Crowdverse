@@ -11,4 +11,9 @@ export default class UserInfoStore {
   updateUserId = nextUser => {
     this.userID = nextUser;
   };
+
+  @action
+  getUserId = () => {
+    return this.userID;
+  };
 }
