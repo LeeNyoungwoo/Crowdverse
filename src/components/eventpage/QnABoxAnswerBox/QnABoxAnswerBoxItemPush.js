@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import autosize from "autosize";
-import "./QnABoxItemPush.scss";
+import autosize from 'autosize';
+import "./QnABoxAnswerBoxItemPush.scss";
 
-class QnABoxItemPush extends Component {
+class QnABoxAnswerBoxItemPush extends Component {
   state = {
-    value: ""
+    value: "",
   };
 
   componentDidMount() {
@@ -25,18 +25,22 @@ class QnABoxItemPush extends Component {
   };
 
   render() {
-    const { qnaBoxWidth } = this.props;
+    const { width } = this.props;
+    const thisWidth = width * 0.8;
     return (
-      <div className={classNames("qna_box_item_push_container")}>
+      <div
+        className={classNames("answer_item_push_container")}
+        style={{ width: thisWidth }}
+      >
         <form className={classNames("form")} onSubmit={this.handleSubmit}>
           <div className={classNames("textarea_box")}>
             <textarea
               className={classNames("textarea")}
-              style={{ width: qnaBoxWidth * 0.8 }}
-              placeholder=" Ask a question, feel free!"
+              style={{ width: thisWidth * 0.8 }}
+              placeholder=" Add a answer comment!"
               value={this.state.value}
               onChange={event => this.handleChange(event)}
-              ref={c => (this.textarea = c)}
+              ref={c=>this.textarea=c}
             />
           </div>
           <div className={classNames("button_box")}>
@@ -48,4 +52,4 @@ class QnABoxItemPush extends Component {
   }
 }
 
-export default QnABoxItemPush;
+export default QnABoxAnswerBoxItemPush;

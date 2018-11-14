@@ -16,8 +16,10 @@ export const SourceBoxList = asyncComponent(() => import("components/eventpage/S
 export const SourceBoxListItem = asyncComponent(() => import("components/eventpage/SourceBoxListItem"));
 export const SourceBoxTab = asyncComponent(() => import("components/eventpage/SourceBoxTab"));
 export const QnABox = asyncComponent(() => import("components/eventpage/QnABox"));
-// export const  = asyncComponent(() => import("components/eventpage/"));
-// export const  = asyncComponent(() => import("components/eventpage/"));
+export const QnABoxItemPush = asyncComponent(() => import("components/eventpage/QnABoxItemPush"));
+export const QnABoxList = asyncComponent(() => import("components/eventpage/QnABoxList"));
+export const QnABoxListItem = asyncComponent(() => import("components/eventpage/QnABoxListItem"));
+export const QnABoxAnswerBox = asyncComponent(() => import("components/eventpage/QnABoxAnswerBox"));
 // export const  = asyncComponent(() => import("components/eventpage/"));
 // export const  = asyncComponent(() => import("components/eventpage/"));
 // export const  = asyncComponent(() => import("components/eventpage/"));

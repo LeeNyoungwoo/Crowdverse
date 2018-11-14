@@ -14,6 +14,7 @@ class Event extends Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
+    this.setState({ elementHeight: this.divRef.clientHeight });
   }
 
   componentWillUnmount() {
@@ -33,7 +34,7 @@ class Event extends Component {
         </h1>
         <h2>Event {match.params.name}</h2>
         <div className={classNames("eventpage_container")}>
-          <Column flexGrow={1}>
+          <Column flexGrow={1} ref={element => (this.divRef = element)}>
             <Row vertical="center">
               <Column flexGrow={1} horizontal="center">
                 <SourceBox
@@ -41,7 +42,7 @@ class Event extends Component {
                   height={this.state.height * 0.8}
                 />
               </Column>
-              <VerticalHr height={"500"} />
+              <VerticalHr height={"700"} />
               <Column flexGrow={1} horizontal="center">
                 <QnABox
                   width={this.state.width * 0.4}

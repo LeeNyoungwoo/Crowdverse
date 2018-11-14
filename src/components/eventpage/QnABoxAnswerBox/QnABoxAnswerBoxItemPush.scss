@@ -4,8 +4,8 @@ $textarea-color: #a8a8a8;
 $textarea-color_hover: #8d8d8d;
 $textarea-bolder: 2px solid $textarea-color;
 
-.qna_box_item_push_container {
-  margin-top: 30px;
+.answer_item_push_container {
+  margin-top: 10px;
   width: 100%;
   max-height: $textarea-max-height;
   position: relative;
@@ -21,7 +21,7 @@ $textarea-bolder: 2px solid $textarea-color;
       justify-content: space-around;
 
       .textarea {
-        font-size: 20px;
+        font-size: 15px;
         font-family: sans-serif;
         max-height: $textarea-max-height;
         border-top: $textarea-bolder;

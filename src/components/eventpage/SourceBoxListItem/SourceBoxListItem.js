@@ -9,6 +9,7 @@ import "./SourceBoxListItem.scss";
 // content: "content",
 // poster: "poster",
 // date: "date"
+
 class SourceBoxListItem extends Component {
   sampleAlert = message => {
     alert(`Hello! I am an alert box!!\nmessage: ${message}`);

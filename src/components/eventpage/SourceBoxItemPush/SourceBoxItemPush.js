@@ -24,7 +24,7 @@ class SourceBoxItemPush extends Component {
           {!this.state.isHovered ? (
             <span className="plus">+</span>
           ) : (
-            <span className="tooltip">
+            <span className="tooltiptext">
               If you have a source to upload, please click this button!
             </span>
           )}
