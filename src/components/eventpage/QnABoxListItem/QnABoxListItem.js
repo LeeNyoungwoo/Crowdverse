@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { QnABoxAnswerBox } from "pages/index.async.js";
 import "./QnABoxListItem.scss";
-import VerticalHr from "../../VerticalHr";
 
 // {
 //     event: "event1",
@@ -31,6 +30,7 @@ class QnABoxListItem extends Component {
 
   render() {
     const { data, width } = this.props;
+    const iconSize = 25;
 
     return (
       <div className={classNames("qna_box_list_item_container")}>
@@ -43,7 +43,11 @@ class QnABoxListItem extends Component {
             onClick={() => this.setState({ isUnfoled: !this.state.isUnfoled })}
           >
             <div className={classNames("icon_arrow")}>
-              {!this.state.isUnfoled ? <IoIosArrowDown /> : <IoIosArrowUp />}
+              {!this.state.isUnfoled ? (
+                <IoIosArrowDown id="icon_arrow" size={iconSize} />
+              ) : (
+                <IoIosArrowUp id="icon_arrow" size={iconSize} />
+              )}
             </div>
             <div className={classNames("question_content")}>
               <div className={classNames("question_title")}>

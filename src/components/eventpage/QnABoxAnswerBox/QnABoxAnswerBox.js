@@ -14,15 +14,22 @@ import "./QnABoxAnswerBox.scss";
 class QnABoxAnswerBox extends Component {
   render() {
     const { answerDataList, isUnfoled, width } = this.props;
+    const answerBoxWidth = width * 0.9;
     return (
-      <div className={classNames("answer_box_list_container")}>
-        <div className={classNames("answer_list_wrapper")}>
+      <div className={classNames("answer_box_container")}>
+        <div className={classNames("answer_wrapper")}>
           {isUnfoled
             ? answerDataList.map((data, index) => (
-                <QnABoxAnswerBoxItem key={index} data={data} />
+                <QnABoxAnswerBoxItem
+                  key={index}
+                  data={data}
+                  width={answerBoxWidth}
+                />
               ))
             : null}
-          {isUnfoled ? <QnABoxAnswerBoxItemPush width={width} /> : null}
+          {isUnfoled ? (
+            <QnABoxAnswerBoxItemPush width={answerBoxWidth} />
+          ) : null}
         </div>
       </div>
     );
