@@ -30,6 +30,8 @@ class QnABoxAnswerBox extends Component {
                   key={index}
                   data={data}
                   width={answerBoxWidth}
+                  qIndex={qIndex}
+                  forceUpdate={forceUpdate}
                 />
               ))
             : null}

@@ -63,7 +63,7 @@ class QnABoxAnswerBoxItemPush extends Component {
                 this.getCurrentTimeInFormat()
               );
               forceUpdate();
-              this.setState({value:""})
+              this.setState({ value: "" });
               this.textarea.focus();
             }}
           >

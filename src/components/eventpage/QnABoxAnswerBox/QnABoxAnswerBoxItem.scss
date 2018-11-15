@@ -1,3 +1,5 @@
+$answer-item-box-color: #ebebeb;
+
 .answer_list_item_container {
   .item_wrapper {
     margin-top: 10px;
@@ -5,8 +7,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #ebebeb;
-    border-radius:10px;
+    background-color: $answer-item-box-color;
+    border-radius: 10px;
     .answer_content {
       .answer_title {
         padding-left: 10px;
@@ -29,7 +31,22 @@
       justify-content: flex-end;
       margin-right: 15px;
       font-size: 20px;
+      .edit_box {
+        color: $answer-item-box-color;
+        font-size: 15px;
+        &--hover-active {
+          cursor: pointer;
+          font-size: 15px;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+        .remove {
+        }
+      }
+
       &_icon {
+        cursor: pointer;
         padding-top: 5px;
         margin-right: 10px;
       }
