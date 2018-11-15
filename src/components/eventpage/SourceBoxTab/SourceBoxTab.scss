@@ -1,0 +1,55 @@
+$color : #a8a8a8;
+$color_hover : #8d8d8d;
+
+.container {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  // display: flex;
+  // flex-direction: row;
+
+  .tab {
+    font-size: 20px;
+  }
+
+  .column {
+    color: $color;
+    &:hover {
+      cursor: pointer;
+      color: $color_hover;
+    }
+  }
+
+  .all {
+    color: $color;
+    &-active {
+      font-weight: bold;
+      color: black;
+    }
+    // padding-top: 5px;
+    // padding-bottom: 5px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+  }
+  .official {
+    color: $color;
+    &-active {
+      font-weight: bold;
+      color: black;
+    }
+    // padding-top: 5px;
+    // padding-bottom: 5px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+  }
+  .individual {
+    color: $color;
+    &-active {
+      font-weight: bold;
+      color: black;
+    }
+    // padding-top: 5px;
+    // padding-bottom: 5px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+  }
+}

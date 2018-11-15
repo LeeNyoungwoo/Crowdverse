@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,3 +11,22 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
+=======
+import React from "react";
+import ReactDOM from "react-dom";
+import Root from "./Root";
+import { Provider } from "mobx-react";
+import RootStore from "./stores";
+import registerServiceWorker from "./registerServiceWorker";
+import "./index.css";
+
+const roots = new  RootStore();
+
+ReactDOM.render(
+  <Provider {...roots}>
+    <Root />
+  </Provider>,
+  document.getElementById("root")
+);
+registerServiceWorker();
+>>>>>>> 26cb3f65a6992e584b05da96a56ea8e689c992b2
