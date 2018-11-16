@@ -30,6 +30,18 @@ const exampleEventList = [
 ]
 // class Perspective extends React.component {}
 
+const headerInfo = [{},{}]
+
+const exampleEventList = [
+	{
+		key: 0,
+		imageName : "./image.png",
+		title: "",
+		content: "",
+	},
+	{},
+]
+
 const Perspective = ({ match }) => {
   return (
     <div>
