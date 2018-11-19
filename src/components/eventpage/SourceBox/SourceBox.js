@@ -40,7 +40,8 @@ class SourceBox extends Component {
   componentDidUpdate() {
     //push store data to the db using eventpage.getCurrentSourceDataList()
     // pushToDB(targetDataList: eventpage.getCurrentSourceDataList())
-    //fire.database().ref('source').push(this.props.eventpage.getCurrentSourceDataList())
+    // console.log(this.props.eventpage.getCurrentSourceDataList())
+    fire.database().ref('source').set(this.props.eventpage.getCurrentSourceDataList())
   }
 
   forceUpdateSourceBox = () => {

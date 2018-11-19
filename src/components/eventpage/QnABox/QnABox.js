@@ -20,7 +20,7 @@ class QnABox extends Component {
   componentDidUpdate() {
     //push store data to the db using eventpage.getCurrentQnADataList()
     // pushToDB(targetDataList: eventpage.getCurrentQnADataList())
-    //fire.database().ref('qna').push(this.props.eventpage.getCurrentSourceDataList())
+    fire.database().ref('qna').set(this.props.eventpage.getCurrentQnADataList())
 
   }
 

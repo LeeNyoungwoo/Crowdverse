@@ -1,4 +1,5 @@
 import { observable, action } from "mobx";
+import fire from '../fire';
 
 //description for DB data: currentSourceDataList
 //each one of sampleListData is for each post
@@ -134,11 +135,7 @@ export default class EventPageStore {
 
   @action
   updateCurrentQnADataList = currentQnADataList => {
-    console.log("updating data ")
-    console.log(currentQnADataList)
     this.currentQnADataList = currentQnADataList;
-    console.log("updated")
-    console.log(currentQnADataList)
   };
 
   @action
@@ -156,6 +153,7 @@ export default class EventPageStore {
       questionPoster: questionPoster,
       questionDate: questionDate
     });
+
   };
 
   @action

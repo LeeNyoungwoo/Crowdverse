@@ -25,7 +25,8 @@ class QnABoxAnswerBox extends Component {
       <div className={classNames("answer_box_container")}>
         <div className={classNames("answer_wrapper")}>
           {isUnfoled
-            ? answerDataList.map((data, index) => (
+            ? typeof answerDataList !== "undefined"
+              ? answerDataList.map((data, index) => (
                 <QnABoxAnswerBoxItem
                   key={index}
                   data={data}
@@ -34,7 +35,8 @@ class QnABoxAnswerBox extends Component {
                   forceUpdate={forceUpdate}
                 />
               ))
-            : null}
+            : null
+          :null}
           {isUnfoled ? (
             <QnABoxAnswerBoxItemPush
               qIndex={qIndex}
