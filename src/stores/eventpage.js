@@ -29,7 +29,8 @@ export default class EventPageStore {
       title: "official_title_1",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -38,7 +39,8 @@ export default class EventPageStore {
       title: "individual_title_1",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -47,7 +49,8 @@ export default class EventPageStore {
       title: "official_title_2",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -56,7 +59,8 @@ export default class EventPageStore {
       title: "individual_title_2",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -65,7 +69,8 @@ export default class EventPageStore {
       title: "official_title_3",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -74,7 +79,8 @@ export default class EventPageStore {
       title: "individual_title_3",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -83,7 +89,8 @@ export default class EventPageStore {
       title: "official_title_4",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -92,7 +99,8 @@ export default class EventPageStore {
       title: "individual_title_4",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -101,7 +109,8 @@ export default class EventPageStore {
       title: "official_title_5",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     },
     {
       event: "event1",
@@ -110,7 +119,8 @@ export default class EventPageStore {
       title: "individual_title_5",
       content: "content",
       poster: "poster",
-      date: "date"
+      date: "date",
+      link: "",
     }
   ];
 

@@ -8,7 +8,15 @@ export const Event = asyncComponent(() => import("./Event"));
 // export const OptionalComponent = asyncComponent(() => import('components/OptionalComponent'));
 //components
 // export const  = asyncComponent(() => import("components/"));
+export const Header = asyncComponent(() => import("components/Header"));
 export const VerticalHr = asyncComponent(() => import("components/VerticalHr"));
+export const BreadCrumbs = asyncComponent(() => import("components/BreadCrumbs"));
+
+// ./Perspective
+export const EventBoxList = asyncComponent(() => import("components/perspectivepage/EventBoxList"));
+export const EventBoxListItem = asyncComponent(() => import("components/perspectivepage/EventBoxListItem"));
+
+
 // ./eventpage
 export const SourceBox = asyncComponent(() => import("components/eventpage/SourceBox"));
 export const SourceBoxItemPush = asyncComponent(() => import("components/eventpage/SourceBoxItemPush"));

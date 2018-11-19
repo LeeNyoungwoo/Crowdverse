@@ -7,6 +7,7 @@ import {
   Event,
 } from "pages/index.async.js";
 import { Menu } from "components";
+import { Header } from "pages/index.async.js";
 
 class App extends Component {
   state = {
@@ -22,6 +23,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         <Menu />
         <Route exact path="/" component={Home} />
         <Switch>
