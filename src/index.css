@@ -1,19 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-=======
   font-family: sans-serif;
 }
 
@@ -37,4 +24,3 @@ code {
   background: #555; 
   border-radius: 10px;
 }
->>>>>>> 26cb3f65a6992e584b05da96a56ea8e689c992b2
