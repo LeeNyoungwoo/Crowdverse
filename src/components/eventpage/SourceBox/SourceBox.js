@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./SourceBox.scss";
 import { SourceBoxTab, SourceBoxItemPush, SourceBoxList } from "pages/index.async.js";
 import { observer, inject } from "mobx-react";
+import fire from '../../../fire';
+import { values } from "../../../../node_modules/mobx";
 
 //description for DB data
 //each one of originDataList is for each post
@@ -26,6 +28,11 @@ class SourceBox extends Component {
   };
 
   componentWillMount() {
+
+    fire.database().ref('source').on('value', snapshot => {
+      console.log(snapshot.val())
+      this.props.eventpage.updateCurrentSourceDataList(snapshot.val())
+    })
     //get datalist from db and add it to the eventpage.currentSourceDataList by using eventpage.updateCurrentSourceDataList function
     // eventpage.updateCurrentSourceDataList(datalist from db)
   }
