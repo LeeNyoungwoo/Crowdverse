@@ -40,6 +40,7 @@ class SourceBox extends Component {
   componentDidUpdate() {
     //push store data to the db using eventpage.getCurrentSourceDataList()
     // pushToDB(targetDataList: eventpage.getCurrentSourceDataList())
+    //fire.database().ref('source').push(this.props.eventpage.getCurrentSourceDataList())
   }
 
   forceUpdateSourceBox = () => {
@@ -59,6 +60,7 @@ class SourceBox extends Component {
   };
 
   getIndividualDataList = originDataList => {
+    //console.log(originDataList)
     const individualDataList = originDataList.filter(
       data => data.sourceTab === "individual"
     );

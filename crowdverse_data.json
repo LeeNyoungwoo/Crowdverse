@@ -1,0 +1,49 @@
+{
+  "source" :
+  [
+    {
+    "event": "The Era of No War",
+    "sourceTab": "official",
+    "imageSrc": "src",
+    "title": "The Korea Without Nuclear Weapons and War Has Begun",
+    "content": "South and North Korea delegates announced a joint declaration on September 19th in Pyongyang and a military agreement on the implementation of Panmunjom declaration on 19th.",
+    "poster": "Keon",
+    "date": "2018.09.19",
+    "link": "http://www.hani.co.kr/arti/politics/defense/862798.html "
+    }
+  ],
+  "qna":
+  [
+    {
+      "event": "The Era of No War",
+      "qIndex": 0,
+      "questionContent": "Why do North Korea wants war? What can they get out of it?",
+      "answerList": 
+        [
+          {
+            "qIndex": 0,
+            "answerContent": "Because they are crazy.",
+            "aIndex": 0,
+            "upvote": 0,
+            "ansPoster": "had1das",
+            "ansDate": "10/3/2018 오후 9:30:10" 
+          }
+
+        ],
+      "questionPoster": "Anonymous",
+      "questionDate": "10/3/2018 오후 9:10:40"
+    }
+  ],
+  "user": 
+  [
+    {
+      "userID":"Keon"
+    },
+    {
+      "userID": "Evey"
+    },
+    {
+      "userID": "Yoonseo"
+    }
+  ]
+}

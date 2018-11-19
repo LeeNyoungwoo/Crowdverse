@@ -51,76 +51,6 @@ export default class EventPageStore {
       poster: "poster",
       date: "date",
       link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_2",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_3",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_3",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_4",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_4",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_5",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_5",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
     }
   ];
 
@@ -204,7 +134,11 @@ export default class EventPageStore {
 
   @action
   updateCurrentQnADataList = currentQnADataList => {
+    console.log("updating data ")
+    console.log(currentQnADataList)
     this.currentQnADataList = currentQnADataList;
+    console.log("updated")
+    console.log(currentQnADataList)
   };
 
   @action
