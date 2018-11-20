@@ -1,4 +1,5 @@
 import { observable, action } from "mobx";
+import fire from '../fire';
 
 //description for DB data: currentSourceDataList
 //each one of sampleListData is for each post
@@ -47,76 +48,6 @@ export default class EventPageStore {
       sourceTab: "official",
       imageSrc: "scr",
       title: "official_title_2",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_2",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_3",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_3",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_4",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_4",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_5",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_5",
       content: "content",
       poster: "poster",
       date: "date",
@@ -205,6 +136,7 @@ export default class EventPageStore {
   @action
   updateCurrentQnADataList = currentQnADataList => {
     this.currentQnADataList = currentQnADataList;
+    
   };
 
   @action
@@ -218,10 +150,20 @@ export default class EventPageStore {
       event: event,
       qIndex: this.currentQnADataList.length,
       questionContent: questionContent,
-      answerList: [],
+      answerList: [
+        {
+          qIndex: this.currentQnADataList.length,
+          answerContent: "What is your opinion? Add your answers below.",
+          aIndex: 0,
+          upvote: 0,
+          ansPoster: "CrowdVerse",
+          ansDate: " "
+        }
+      ],
       questionPoster: questionPoster,
       questionDate: questionDate
     });
+
   };
 
   @action

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { QnABoxItemPush, QnABoxList } from "pages/index.async.js";
 import "./QnABox.scss";
 import { observer, inject } from "mobx-react";
+import fire from '../../../fire';
 
 @inject("eventpage")
 @observer
@@ -9,11 +10,18 @@ class QnABox extends Component {
   componentWillMount() {
     //get datalist from db and add it to the eventpage.currentQnADataList by using eventpage.updateCurrentQnADataList function
     // eventpage.updateCurrentQnADataList(datalist from db)
+
+    fire.database().ref('qna').on('value', snapshot => {
+      console.log(snapshot.val())
+      this.props.eventpage.updateCurrentQnADataList(snapshot.val())
+    })
   }
 
   componentDidUpdate() {
     //push store data to the db using eventpage.getCurrentQnADataList()
     // pushToDB(targetDataList: eventpage.getCurrentQnADataList())
+    fire.database().ref('qna').set(this.props.eventpage.getCurrentQnADataList())
+
   }
 
   forceUpdateQnABox = () => {
