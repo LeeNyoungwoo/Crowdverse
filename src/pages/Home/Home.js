@@ -8,7 +8,7 @@ import china from './China.png';
 const eventName = [
   {
     category: "Politics",
-    title1: "Peace treaty will be signed",
+    title1: "The Era of No War",
     title2: "Tax Increases",
     title3: "Vote Rate"
   },
@@ -60,7 +60,7 @@ class Home extends Component {
             </div>
             <div class="homenationalFlagText1">Korea</div>
             <div class="homenationalFlagText2">{this.state.numSourceKorea}</div>
-            <div class="homenationalFlagText3">sources</div>
+            <div class="homenationalFlagText3">sources</div>=
           </div>
           <div class="homenationalFlagBox">
             <div class="homenationalFlagImg">

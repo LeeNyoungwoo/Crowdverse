@@ -17,22 +17,22 @@ const Menu = () => {
         </li>
         <li>
           <NavLink to="/perspective/politic" activeStyle={activeStyle}>
-            Politic
+            Politics
           </NavLink> 
         </li>
         <li>
           <NavLink to="/perspective/social" activeStyle={activeStyle}>
-            social
+            Social
           </NavLink>
         </li>
         <li>
           <NavLink to="/perspective/technology" activeStyle={activeStyle}>
-            technology
+            Technology
           </NavLink>
         </li>
         <li>
-          <NavLink to="/event/foo" activeStyle={activeStyle}>
-            Event foo
+          <NavLink to="/event/TheEraofNoWar" activeStyle={activeStyle}>
+            The Era of No War
           </NavLink>
         </li>
       </ul>

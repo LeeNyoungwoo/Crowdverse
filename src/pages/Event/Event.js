@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Column, Row } from "simple-flexbox";
-import { SourceBox, QnABox, VerticalHr } from "pages/index.async.js";
+import { BreadCrumbs, SourceBox, QnABox, VerticalHr } from "pages/index.async.js";
 import classNames from "classnames";
 import "./Event.scss";
 import { observer, inject } from "mobx-react";
@@ -44,10 +44,8 @@ class Event extends Component {
     const { userinfo } = this.props;
     return (
       <div>
-        <h1>
-          Screen Size: width={this.state.width} height={this.state.height}
-        </h1>
-        <h2>Event {match.params.name}</h2>
+        <BreadCrumbs />
+        {/* <h2>Event {match.params.name}</h2> */}
         <div className="select_user">
           <span>
             <strong>Select User</strong>
