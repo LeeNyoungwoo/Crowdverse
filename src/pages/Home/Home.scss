@@ -1,4 +1,4 @@
-.upperBox {
+.homeupperBox {
   width: 80%;
   height: 230px;
   justify-content: space-between;
@@ -6,12 +6,12 @@
 	margin: auto;
 	margin-top: 50px;
 }
-.upperTextBox {
+.homeupperTextBox {
 	width: 70%;
 	height: 230px;
 	float: left;
 }
-.upperBoxTitle {
+.homeupperBoxTitle {
 	color: black;
 	display: table-cell;
 	font-weight: bold;
@@ -20,44 +20,44 @@
 	padding-left: 30px;
 	padding-bottom: 10px;
 }
-.upperBoxContent {
+.homeupperBoxContent {
 	color: black;
 	font-size: 25px;
 	padding-top: 5px;
 	padding-left: 30px;
 }
-.upperImageBox {
+.homeupperImageBox {
 	width: 30%;
 	height: 230px;
 	float: right;
 }
-.upperImage {
+.homeupperImage {
 	width: 80%;
 	height: 180px;
 	margin: auto;
 	margin-top: 25px;
 	margin-left: 10%;
 }
-.boxText {
+.homeboxText {
 	width: 80%;
 	height: 80px;
 	justify-content: space-between;
 	padding-top: 30px;
 	margin:auto;
 }
-.boxTextStyle {
+.homeboxTextStyle {
   display: inline-table;
   padding-left: 5px;
 	font-size: 23px;
 }
-.boxNumStyle {
+.homeboxNumStyle {
   display: inline-table;
   padding-left: 10px;
 	font-size: 30px;
 	font-weight: bold;
-	color: red;
+	color: #DD2C00;
 }
-.nationalBox {
+.homenationalBox {
   width: 80%;
   height: 200px;
 	margin: auto;
@@ -66,7 +66,7 @@
 	background-color: white;
 	padding-bottom: 20px;
 }
-.nationalFlagBox {
+.homenationalFlagBox {
 	width: 265px;
   text-align: center;
   display: inline-table;
@@ -75,70 +75,70 @@
 	padding-right: 8px;
 	padding-left: 8px;
 }
-.nationalFlagImg{
+.homenationalFlagImg{
 	height: 80px;
 	width: 200px;
   display: inline-table;
 }
-.FlagImg{
+.homeFlagImg{
 	height: 100px;
 	width: 200px;
 }
-.nationalFlagText1 {
+.homenationalFlagText1 {
 	padding-top: 10px;
 	font-size: 25px;
 	font-weight: bold;
 	text-align: center;
 }
-.nationalFlagText2 {
+.homenationalFlagText2 {
 	margin-top: 5px;
 	font-size: 23px;
 	font-weight: bold;
 	text-align: center;
   display: inline-table;
 }
-.nationalFlagText3 {
+.homenationalFlagText3 {
 	padding-left: 10px;
 	margin-top: 5px;
 	font-size: 20px;
 	text-align: center;
   display: inline-table;
 }
-.hrBox{
+.homehrBox{
 	width: 80%;
 	height: 10px;
 	margin:auto;
 }
-.hrStyle {
+.homehrStyle {
 	margin: auto;
 }
-.eventBox {
+.homeeventBox {
   width: 80%;
   height: 250px;
 	margin: auto;
 	justify-content: space-between;
 }
-.eventCategoryBox {
+.homeeventCategoryBox {
 	width: 300px;
   text-align: center;
   display: inline-table;
 	height: 210px;
 	background-color: #EEEEEE;
 }
-.eventCategoryText1 {
+.homeeventCategoryText1 {
 	margin-top: 10px;
 	margin-bottom: 20px;
 	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
 }
-.eventCategoryText2 {
+.homeeventCategoryText2 {
 	font-size: 20px;
 	margin-top: 10px;
 }
-.eventLeft {
+.homeeventLeft {
 	margin-left: 30px;
 }
-.eventRight {
+.homeeventRight {
 	margin-right: 30px;
 }

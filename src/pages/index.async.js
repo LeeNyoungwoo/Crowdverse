@@ -11,11 +11,15 @@ export const Event = asyncComponent(() => import("./Event"));
 export const Header = asyncComponent(() => import("components/Header"));
 export const VerticalHr = asyncComponent(() => import("components/VerticalHr"));
 export const BreadCrumbs = asyncComponent(() => import("components/BreadCrumbs"));
+export const AddModal = asyncComponent(() => import("components/AddModal"));
+export const ContentModal = asyncComponent(() => import("components/ContentModal"));
 
 // ./Perspective
 export const EventBoxList = asyncComponent(() => import("components/perspectivepage/EventBoxList"));
 export const EventBoxListItem = asyncComponent(() => import("components/perspectivepage/EventBoxListItem"));
 
+// ./Compoment/ComtentModal
+export const ContentComentPush = asyncComponent(() => import("components/ContentModal/ContentComentPush"));
 
 // ./eventpage
 export const SourceBox = asyncComponent(() => import("components/eventpage/SourceBox"));

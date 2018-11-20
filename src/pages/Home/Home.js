@@ -5,14 +5,6 @@ import korea from './Korea.png';
 import us from './US.png';
 import china from './China.png';
 
-const numSource = [
-  {
-    numSourceKorea: 19,
-    numSourceUS : 8,
-    numSourceChina: 5
-  }
-]
-
 const eventName = [
   {
     category: "Politics",
@@ -33,70 +25,77 @@ const eventName = [
     title3: "Algorithm of Google"
   }
 ]
+
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { numTotal: 32, numSourceKorea: 19, numSourceUS: 8, numSourceChina: 5};
+    // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
   render() {
     return (
       <div>
-        <div class="upperBox">
-          <div class="upperTextBox">
-            <div class="upperBoxTitle">Welcome to CrowdVerse</div>
-            <div class='upperBoxContent'>We aim to fill the information gap</div>
-            <div class='upperBoxContent'>between each person who has different cultural background</div>
+        <div class="homeupperBox">
+          <div class="homeupperTextBox">
+            <div class="homeupperBoxTitle">Welcome to CrowdVerse</div>
+            <div class='homeupperBoxContent'>We aim to fill the information gap</div>
+            <div class='homeupperBoxContent'>between each person who has different cultural background</div>
           </div>
-          <div class="upperImageBox">
-            <img src={header} class="upperImage" alt="Header"/>
+          <div class="homeupperImageBox">
+            <img src={header} class="homeupperImage" alt="Header"/>
           </div>
         </div>
-        <div class="boxText">
-            <div class='boxTextStyle'>We have</div>
-          <div class='boxNumStyle'>32</div>
-          <div class='boxTextStyle'>Sources in</div>
-          <div class='boxNumStyle'>3</div>
-          <div class='boxTextStyle'>different Perspectives. Enjoy!</div>
+        <div class="homeboxText">
+            <div class='homeboxTextStyle'>We have</div>
+          <div class='homeboxNumStyle'>{this.state.numTotal}</div>
+          <div class='homeboxTextStyle'>Sources in</div>
+          <div class='homeboxNumStyle'>3</div>
+          <div class='homeboxTextStyle'>different Perspectives. Enjoy!</div>
         </div>
-        <div class="nationalBox">
-          <div class="nationalFlagBox">
-            <div class="nationalFlagImg">
-              <img src={korea} class="FlagImg" alt="Korea"/>
+        <div class="homenationalBox">
+          <div class="homenationalFlagBox">
+            <div class="homenationalFlagImg">
+              <img src={korea} class="homeFlagImg" alt="Korea"/>
             </div>
-            <div class="nationalFlagText1">Korea</div>
-            <div class="nationalFlagText2">{numSource.numSourceKorea}</div>
-            <div class="nationalFlagText3">sources</div>
+            <div class="homenationalFlagText1">Korea</div>
+            <div class="homenationalFlagText2">{this.state.numSourceKorea}</div>
+            <div class="homenationalFlagText3">sources</div>
           </div>
-          <div class="nationalFlagBox">
-            <div class="nationalFlagImg">
-              <img src={us} class="FlagImg" alt="US"/>
+          <div class="homenationalFlagBox">
+            <div class="homenationalFlagImg">
+              <img src={us} class="homeFlagImg" alt="US"/>
             </div>
-            <div class="nationalFlagText1">U.S</div>
-            <div class="nationalFlagText2">{numSource.numSourceUS}</div>
-            <div class="nationalFlagText3">sources</div>
+            <div class="homenationalFlagText1">U.S</div>
+            <div class="homenationalFlagText2">{this.state.numSourceUS}</div>
+            <div class="homenationalFlagText3">sources</div>
           </div>        
-          <div class="nationalFlagBox">
-            <div class="nationalFlagImg">
-              <img src={china} class="FlagImg" alt="China"/>
+          <div class="homenationalFlagBox">
+            <div class="homenationalFlagImg">
+              <img src={china} class="homeFlagImg" alt="China"/>
             </div>
-            <div class="nationalFlagText1">China</div>
-            <div class="nationalFlagText2">{numSource.numSourceChina}</div>
-            <div class="nationalFlagText3">sources</div>
+            <div class="homenationalFlagText1">China</div>
+            <div class="homenationalFlagText2">{this.state.numSourceChina}</div>
+            <div class="homenationalFlagText3">sources</div>
           </div>
         </div>
-        <div class="hrBox">
-          <hr class="hrStyle" />
+        <div class="homehrBox">
+          <hr class="homehrStyle" />
         </div>
-        <div class="boxText">
-          <div class='boxTextStyle'>We have</div>
-          <div class='boxNumStyle'>8</div>
-          <div class='boxTextStyle'>Events in</div>
-          <div class='boxNumStyle'>3</div>
-          <div class='boxTextStyle'>Categories. You can dive in!</div>
+        <div class="homeboxText">
+          <div class='homeboxTextStyle'>We have</div>
+          <div class='homeboxNumStyle'>8</div>
+          <div class='homeboxTextStyle'>Events in</div>
+          <div class='homeboxNumStyle'>3</div>
+          <div class='homeboxTextStyle'>Categories. You can dive in!</div>
         </div>
-        <div class="eventBox">
+        <div class="homeeventBox">
           {eventName.map((data) => (
-            <div class="eventRight eventCategoryBox">
-              <div class="eventCategoryText1">{data.category}</div>
-              <div class="eventCategoryText2">{data.title1}</div>
-              <div class="eventCategoryText2">{data.title2}</div>
-              <div class="eventCategoryText2">{data.title3}</div>
+            <div class="homeeventRight homeeventCategoryBox">
+              <div class="homeeventCategoryText1">{data.category}</div>
+              <div class="homeeventCategoryText2">{data.title1}</div>
+              <div class="homeeventCategoryText2">{data.title2}</div>
+              <div class="homeeventCategoryText2">{data.title3}</div>
             </div>
           ))}  
         </div>

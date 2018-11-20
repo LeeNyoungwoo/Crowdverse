@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { observer, inject } from "mobx-react";
-import { BreadCrumbs, EventBoxList } from "pages/index.async.js";
+import { BreadCrumbs, EventBoxList, AddModal, ContentModal } from "pages/index.async.js";
 
 import sample1 from './SampleImage1.jpg';
 import sample2 from './SampleImage2.jpg';
@@ -32,6 +32,8 @@ const exampleEventList = [
 const Perspective = ({ match }) => {
   return (
     <div>
+    	<ContentModal />
+    	<AddModal />
     	<BreadCrumbs />
       <EventBoxList
         eventList={exampleEventList}

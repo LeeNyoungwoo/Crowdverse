@@ -2,39 +2,39 @@
    margin: 0px;
    padding: 0px;
 }
-.main_Box {
+.headermain_Box {
 	width: 100%;
 	height: 90px;
 	background-color: black;
 	top: 0;
 }
-.logoBox {
+.headerlogoBox {
 	width: 40%;
 	height: 90px;
 	display: table;
 	float: left;
 	margin-left: 3%;
 }
-.logoText {
+.headerlogoText {
 	font-size: 40px;
 	display: table-cell;
 	vertical-align: middle;
 	font-weight: bold;
 	color: white;
 }
-.otherBox {
+.headerotherBox {
 	width: 40%;
 	height: 90px;
 	float: right;
 }
-.buttonBox {
+.headerbuttonBox {
 	width: 40%;
 	line-height: 90px;
 	float: left;
 	align-items: center;
 	justify-content: center;
 }
-.button {
+.headerbutton {
 	background-color: white;
 	height: 30px;
 	display: inline-block;
@@ -44,30 +44,30 @@
 	border: none;
   font-size: 16px;
 }
-.userBox {
+.headeruserBox {
 	width: 60%;
 	height: 90px;
 	float: right;
 }
-.userNameBox {
+.headeruserNameBox {
 	width: 70%;
 	text-align: right;
 	display: table;
 	height: 90px;
 	float: left;
 }
-.userNameText {
+.headeruserNameText {
 	display: table-cell;
 	color: white;
 	vertical-align: middle;
 	font-size: 20px;
 }
-.userImageBox {
+.headeruserImageBox {
 	width: 30%;
 	height: 90px;
 	float: right;
 }
-.userImage {
+.headeruserImage {
 	padding-left: 10px;
 	padding-top: 15px;
 	width: 60px;
