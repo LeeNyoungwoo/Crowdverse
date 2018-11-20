@@ -35,12 +35,15 @@ class QnABoxItemPush extends Component {
     questionPoster,
     questionDate
   ) => {
-    eventpage.addNewQuestion(
-      event,
-      questionContent,
-      questionPoster,
-      questionDate
-    );
+    if (questionContent.length!=0){
+      eventpage.addNewQuestion(
+        event,
+        questionContent,
+        questionPoster,
+        questionDate
+      );
+    }
+    
   };
 
   render() {

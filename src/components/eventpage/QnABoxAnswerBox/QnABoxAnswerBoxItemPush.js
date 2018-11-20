@@ -29,7 +29,10 @@ class QnABoxAnswerBoxItemPush extends Component {
   };
 
   handleSubmit = (eventpage, qIndex, answerContent, ansPoster, ansDate) => {
-    eventpage.addNewAnswer(qIndex, answerContent, ansPoster, ansDate);
+    if (answerContent.length!=0){
+      eventpage.addNewAnswer(qIndex, answerContent, ansPoster, ansDate);
+    }
+   
   };
 
   render() {

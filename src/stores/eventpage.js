@@ -22,38 +22,7 @@ export default class EventPageStore {
 
   //for SourceBox
   @observable currentTab = "all";
-  @observable currentSourceDataList = [
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_1",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "individual",
-      imageSrc: "scr",
-      title: "individual_title_1",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    },
-    {
-      event: "event1",
-      sourceTab: "official",
-      imageSrc: "scr",
-      title: "official_title_2",
-      content: "content",
-      poster: "poster",
-      date: "date",
-      link: "",
-    }
-  ];
+  @observable currentSourceDataList = [];
 
   @action
   updateCurrentTab = currentTab => {
@@ -71,67 +40,7 @@ export default class EventPageStore {
   };
 
   //for QnABox
-  @observable currentQnADataList = [
-    {
-      event: "event1",
-      qIndex: 0,
-      questionContent: "content1",
-      answerList: [
-        {
-          qIndex: 0,
-          answerContent: "answer1",
-          aIndex: 0,
-          upvote: 13,
-          ansPoster: "ans_poster",
-          ansDate: "ans_date" //format: "10/3/2018 오후 9:10:40"
-        }
-      ],
-      questionPoster: "qst_poster",
-      questionDate: "qst_date" //format: "10/3/2018 오후 9:10:40"
-    },
-    {
-      event: "event1",
-      qIndex: 1,
-      questionContent: "content2",
-      answerList: [
-        {
-          qIndex: 1,
-          answerContent: "answer1",
-          aIndex: 0,
-          upvote: 10,
-          ansPoster: "ans_poster",
-          ansDate: "ans_date"
-        },
-        {
-          qIndex: 1,
-          answerContent: "answer2",
-          aIndex: 1,
-          upvote: 10,
-          ansPoster: "ans_poster",
-          ansDate: "ans_date"
-        }
-      ],
-      questionPoster: "qst_poster",
-      questionDate: "qst_date"
-    },
-    {
-      event: "event1",
-      qIndex: 2,
-      questionContent: "content3",
-      answerList: [
-        {
-          qIndex: 2,
-          answerContent: "answer1",
-          aIndex: 0,
-          upvote: 5,
-          ansPoster: "ans_poster",
-          ansDate: "ans_date"
-        }
-      ],
-      questionPoster: "qst_poster",
-      questionDate: "qst_date"
-    }
-  ];
+  @observable currentQnADataList = [];
 
   @action
   updateCurrentQnADataList = currentQnADataList => {
