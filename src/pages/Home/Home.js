@@ -5,6 +5,7 @@ import korea from './Korea.png';
 import us from './US.png';
 import china from './China.png';
 
+
 const numSource = [
   {
     numSourceKorea: 19,
@@ -16,7 +17,7 @@ const numSource = [
 const eventName = [
   {
     category: "Politics",
-    title1: "Peace treaty will be signed",
+    title1: "The Era of No War",
     title2: "Tax Increases",
     title3: "Vote Rate"
   },
@@ -40,26 +41,26 @@ class Home extends Component {
         <div class="upperBox">
           <div class="upperTextBox">
             <div class="upperBoxTitle">Welcome to CrowdVerse</div>
-            <div class='upperBoxContent'>We aim to fill the information gap</div>
-            <div class='upperBoxContent'>between each person who has different cultural background</div>
+            <div class='upperBoxContent'>We aim to encourage you to explore, collect, and discuss</div>
+            <div class='upperBoxContent'>about events from various countries' perspectives.</div>
           </div>
           <div class="upperImageBox">
             <img src={header} class="upperImage" alt="Header"/>
           </div>
         </div>
         <div class="boxText">
-            <div class='boxTextStyle'>We have</div>
+            <div class='boxTextStyle'>We currently have</div>
           <div class='boxNumStyle'>32</div>
           <div class='boxTextStyle'>Sources in</div>
           <div class='boxNumStyle'>3</div>
-          <div class='boxTextStyle'>different Perspectives. Enjoy!</div>
+          <div class='boxTextStyle'>Different National Perspectives. Click to Explore.</div>
         </div>
         <div class="nationalBox">
           <div class="nationalFlagBox">
             <div class="nationalFlagImg">
               <img src={korea} class="FlagImg" alt="Korea"/>
             </div>
-            <div class="nationalFlagText1">Korea</div>
+            <div class="nationalFlagText1">South Korea</div>
             <div class="nationalFlagText2">{numSource.numSourceKorea}</div>
             <div class="nationalFlagText3">sources</div>
           </div>
@@ -88,7 +89,7 @@ class Home extends Component {
           <div class='boxNumStyle'>8</div>
           <div class='boxTextStyle'>Events in</div>
           <div class='boxNumStyle'>3</div>
-          <div class='boxTextStyle'>Categories. You can dive in!</div>
+          <div class='boxTextStyle'>Categories. Click to Dive In.</div>
         </div>
         <div class="eventBox">
           {eventName.map((data) => (

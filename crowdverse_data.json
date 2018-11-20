@@ -1,49 +1,135 @@
 {
-  "source" :
-  [
-    {
-    "event": "The Era of No War",
-    "sourceTab": "official",
-    "imageSrc": "src",
-    "title": "The Korea Without Nuclear Weapons and War Has Begun",
-    "content": "South and North Korea delegates announced a joint declaration on September 19th in Pyongyang and a military agreement on the implementation of Panmunjom declaration on 19th.",
-    "poster": "Keon",
-    "date": "2018.09.19",
-    "link": "http://www.hani.co.kr/arti/politics/defense/862798.html "
-    }
-  ],
-  "qna":
-  [
-    {
-      "event": "The Era of No War",
-      "qIndex": 0,
-      "questionContent": "Why do North Korea wants war? What can they get out of it?",
-      "answerList": 
-        [
-          {
-            "qIndex": 0,
-            "answerContent": "Because they are crazy.",
-            "aIndex": 0,
-            "upvote": 0,
-            "ansPoster": "had1das",
-            "ansDate": "10/3/2018 오후 9:30:10" 
-          }
-
-        ],
-      "questionPoster": "Anonymous",
-      "questionDate": "10/3/2018 오후 9:10:40"
-    }
-  ],
-  "user": 
-  [
-    {
-      "userID":"Keon"
-    },
-    {
-      "userID": "Evey"
-    },
-    {
-      "userID": "Yoonseo"
-    }
-  ]
+  "qna" : [ {
+    "answerList" : [ {
+      "aIndex" : 0,
+      "ansDate" : "10/3/2018 오후 9:30:10",
+      "ansPoster" : "had1das",
+      "answerContent" : "Because they are crazy.",
+      "qIndex" : 0,
+      "upvote" : 0
+    } ],
+    "event" : "The Era of No War",
+    "qIndex" : 0,
+    "questionContent" : "Why does North Korea want war? What can they get out of it?",
+    "questionDate" : "10/3/2018 오후 9:10:40",
+    "questionPoster" : "Anonymous"
+  } ],
+  "source" : [ {
+    "content" : "South and North Korea delegates announced a joint declaration on September 19th in Pyongyang and a military agreement on the implementation of Panmunjom declaration on 19th.",
+    "date" : "2018.09.19",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "http://www.hani.co.kr/arti/politics/defense/862798.html ",
+    "perspective" : "South Korea",
+    "poster" : "Keon",
+    "sourceTab" : "official",
+    "title" : "Finally ‘the Era of no war’ is coming, thanks to North Korea removing nuclear weapons"
+  }, {
+    "content" : "In an interview with the BBC, Moon said, \"The United States has agreed that it is desirable to declare the end of the war with North Korea as a political declaration that it will end the hostilities between North Korea and the United States.",
+    "date" : "2018.10.12",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "http://view.asiae.co.kr/news/view.htm?idxno=2018101216392078556",
+    "perspective" : "South Korea",
+    "poster" : "Nyoungwoo",
+    "sourceTab" : "official",
+    "title" : "President Moon saids \"The declaration of 'Era of No War' is a matter of time, and it will be proceeded."
+  }, {
+    "content" : "Seoul, South Korea (CNN)North Korea said it would close a key missile test facility in the presence of \"international experts\" and potentially destroy its primary nuclear complex if the United States agrees to corresponding measures, South Korean President Moon Jae-in announced in a joint press conference with Kim Jong Un Wednesday.",
+    "date" : "2018.09.20",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "https://edition.cnn.com/2018/09/18/asia/north-korea-south-korea-summit-intl/index.html",
+    "perspective" : "U.S.",
+    "poster" : "Evey",
+    "sourceTab" : "official",
+    "title" : "North and South Korea commit to 'era of no war'"
+  }, {
+    "content" : "Washington (CNN) President Donald Trump issued a White House statement about North Korea on Wednesday evening via Twitter, casting blame on China for difficulties in the US-North Korea relationship and asserting there is \"no reason at this time\" to spend money on joint military exercises with South Korea.",
+    "date" : "2018.04.19",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "https://edition.cnn.com/2018/08/29/politics/donald-trump-north-korea-war-games-china/index.html",
+    "perspective" : "U.S.",
+    "poster" : "Yoonseo",
+    "sourceTab" : "official",
+    "title" : "Trump casts blame on China for North Korea challenges"
+  }, {
+    "content" : "A spokesman for China's foreign ministry said in a briefing, \"We support both North and South Korea's consideration of each other's reasonable concerns\". And also he saids \"We strongly support the two sides to promote progress in the denuclearization of the Korean peninsula and the political resolution process by constantly promoting mutual trust. I hope.",
+    "date" : "2018.09.25",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "https://news.sbs.co.kr/news/endPage.do?news_id=N1004948375",
+    "perspective" : "China",
+    "poster" : "Hoon",
+    "sourceTab" : "official",
+    "title" : "中 “China supports the declaration of the ‘Era of No War’. China to do what it deserves”"
+  }, {
+    "content" : "According to the Chinese Foreign Ministry, a spokesman said \"China hopes that the Korean peninsula will end the war quickly and support the establishment of a peace regime on the Korean peninsula and actively play a role in the Korean peninsula issue.\" in a briefing on the 19th.",
+    "date" : "2018.04.19",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "http://www.newsis.com/view/?id=NISX20180419_0000286815&cid=",
+    "perspective" : "China",
+    "poster" : "Saelyne",
+    "sourceTab" : "official",
+    "title" : "Chinese Foreign Ministry \"China support the 'Era of No War' of Korea and we wants to play an active role"
+  }, {
+    "content" : "While this could be good, We’ll see what the actual terms are. People saying “Well all it takes is the US accepting Peace”, don’t understand the political situation that is going on in Korea. It’s not just the US influence, or military strategic point that the US has, although that is part of it. It is also tied to the fact that the North has wanted peace and “re-unification” for the past 15-20 year, under a couple conditions:\nSouth Korea severs ties and any alliance with the US.\nThe immediate US removal of troops stationed in the south and removal of US bases.\nNorth Korea will only denuclearize if the US does not just in North Korea, but in Japan as well.\nRe-unification under the North Korean Regime.\nThose have been their demands for the past 15 years. People saying that the US has had plenty chances for discussion if they “just considered peace”, have no idea what they are talking about or are a Russian bot. Pulling out of the South has more implications aside from losing influence in just South Korea. Japan has been more and more worried recently about Russian Influence and China, and moving out of South Korea and troops in Japan would leave our long time ally out to dry.",
+    "date" : "",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "",
+    "perspective" : "U.S.",
+    "poster" : "",
+    "sourceTab" : "individual",
+    "title" : ""
+  }, {
+    "content" : "Because it would be a major undertaking, and nobody wants to pay for it or commit to it for the long haul. The average North Korean is dirt poor, uneducated, likely in poor health from lack of food, and brainwashed by decades of totalitarian propaganda. It will likely take at least multiple generations to overcome that even with a huge influx of outside money, education, and industry and infrastructure development, which nobody wants to provide. If the floodgates were just opened between the 2 Koreas it would screw up both sides’ economies. SK can’t do it without other countries’ help.",
+    "date" : "",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "",
+    "perspective" : "North Korea",
+    "poster" : "",
+    "sourceTab" : "individual",
+    "title" : ""
+  }, {
+    "content" : "I can imagine SK would be very pleased with an influx of inexpensive workers and juicy infrastructure projects.",
+    "date" : "",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "",
+    "perspective" : "South Korea",
+    "poster" : "",
+    "sourceTab" : "individual",
+    "title" : ""
+  }, {
+    "content" : "It’s more likely China doesn’t want to lose the nice buffer it has between us troops and it’s border.",
+    "date" : "",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "",
+    "perspective" : "China",
+    "poster" : "",
+    "sourceTab" : "individual",
+    "title" : ""
+  }, {
+    "content" : "China wants US boots on NK soil about half as much as you want anal warts. NK is a buffer for them. Furthermore, if NK’s regime is toppled, the humanitarian crisis that has been going on for decades gets even worse, and suddenly becomes the problem of everyone in the region.\nNK is a shitty, shitty problem -- but it was a stable shitty problem until they started making nukes. They could’ve kept bitching and lobbing the occasional rocket to get humanitarian aid for pretty much the rest of time, so long as China, SK, and the USA all remained more or less the same. Getting into the nuke game changes all that, which is why it was fucking stupid for them to do so, and why I’m shocked China hasn’t been a little more aggressive about getting them to lay the fuck off.",
+    "date" : "",
+    "event" : "The Era of No War",
+    "imageSrc" : "src",
+    "link" : "",
+    "perspective" : "China",
+    "poster" : "",
+    "sourceTab" : "individual",
+    "title" : ""
+  } ],
+  "user" : [ {
+    "userID" : "Keon"
+  }, {
+    "userID" : "Evey"
+  }, {
+    "userID" : "Yoonseo"
+  } ]
 }
