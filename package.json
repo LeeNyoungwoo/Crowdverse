@@ -50,6 +50,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.2",
     "react-icons": "^3.2.2",
+    "react-responsive-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "resolve": "1.6.0",
     "sass-loader": "^7.1.0",

@@ -13,8 +13,8 @@ class BreadCrumbs extends Component {
   			<div class="breadBox">
   				<div class="breadText">> Home > Politics  </div>
   			</div>
-  			<div class="titleBox">
-  				<div class="titleText">Political Events Happening Around the Globe</div>
+  			<div class="breadTitleBox">
+  				<div class="breadTitleText">“What is South Korea’s point of view in this event?”</div>
   			</div>
   		</div>
 		);

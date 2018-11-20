@@ -1,30 +1,70 @@
-.EventBox {
+.eventBox {
 	width: 100%;
-	height: 180px;
+	min-height: 200px;
+	height: 100%;
 	margin: auto;
-	margin-bottom: 70px;
+	margin-bottom: 30px;
+	background-color: #F5F5F5;
 }
-.EventImageBox {
+.eventBox:hover {
+	width: 100%;
+	min-height: 200px;
+	height: 100%;
+	margin: auto;
+	margin-bottom: 30px;
+	background-color: #E0E0E0;
+}
+.eventUpperBox {
+	padding-top: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 96%;
+	height: 38%;
+	display: inline-flex;
+}
+.eventLowerBox {
+	padding-bottom: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 96%;
+	height: 58%;
+	justify-content: center;
+}
+.eventUpperImageBox {
 	width: 20%;
-	height: 180px;
+	height: 100%;
 	float: left;
 }
-.EventImage {
-	width: 100%;
-	height: 180px;
-}
-.EventContentBox {
+.eventUpperRightBox {
 	width: 80%;
-	height: 180px;
+	height: 100%;
 	float: right;
 }
-.EventContentTitle {
-	padding-left: 20px;
+.eventUpperRightTitleBox {
+	padding-left: 25px;
 	font-size: 35px;
 	font-weight: bold;
+	width: 100%;
+	height: 100%;
 }
-.EventContentContent {
-	padding-top: 20px;
-	padding-left: 20px;
-	font-size: 25px;
+.eventUpperRightFoldBox {
+	padding-left: 25px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #0D47A1;
+	width: 100%;
+	height: 50%;
+}
+.spanStyle {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+.eventLowerContentBox {
+	padding-top: 10px;
+	width: 80%;
+	height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+	font-size: 18px;
 }

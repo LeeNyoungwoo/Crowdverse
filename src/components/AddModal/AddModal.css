@@ -1,0 +1,36 @@
+.addmodalBox {
+  max-width: 800px;
+}
+.addmodalTitleBox {
+  width: 700px;
+  height: 80px;
+  display: table;
+}
+.addmodalTitleText {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+  color: #0D47A1;
+}
+.addmodalInputButtonBox {
+  padding-top: 40px;
+  width: 95%;
+  height: 40px; 
+  display: table;
+  margin : auto;
+}
+.addmodalButton {
+  width: 100%;
+  background-color: #EEEEEE;
+  border: 0.5;
+  color: black;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px;
+  cursor: pointer;
+}

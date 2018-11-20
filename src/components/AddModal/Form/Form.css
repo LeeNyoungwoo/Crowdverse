@@ -1,0 +1,27 @@
+.modalForm {
+  display: flex;
+  margin-top: 30px;
+  width: 95%;
+}
+.modalForm input {
+  flex: 1; /* 버튼을 뺀 빈 공간을 모두 채워줍니다 */
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #c5f6fa;
+  width: 85%
+}
+.modalinputBox {
+  width: 20%;
+  height: 50px;
+  display: table;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.modalinputTitle {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: bold;
+}
