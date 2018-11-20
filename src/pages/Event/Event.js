@@ -44,10 +44,8 @@ class Event extends Component {
     const { userinfo } = this.props;
     return (
       <div>
-        <h1>
-          Screen Size: width={this.state.width} height={this.state.height}
-        </h1>
-        <h2>Event {match.params.name}</h2>
+        
+        {/* <h2>Event {match.params.name}</h2> */}
         <div className="select_user">
           <span>
             <strong>Select User</strong>

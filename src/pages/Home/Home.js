@@ -53,7 +53,7 @@ class Home extends Component {
           <div class='boxNumStyle'>32</div>
           <div class='boxTextStyle'>Sources in</div>
           <div class='boxNumStyle'>3</div>
-          <div class='boxTextStyle'>Different National Perspectives. Click to Explore.</div>
+          <div class='boxTextStyle'>Different National Perspectives. </div>
         </div>
         <div class="nationalBox">
           <div class="nationalFlagBox">

@@ -11,10 +11,10 @@ class BreadCrumbs extends Component {
   	return (
   		<div class="mainBox">
   			<div class="breadBox">
-  				<div class="breadText">> Peace treaty will be signed > Stakeholder : South Korea</div>
+  				<div class="breadText">> Home > Politics  </div>
   			</div>
   			<div class="titleBox">
-  				<div class="titleText">“What is South Korea’s point of view in this event?”</div>
+  				<div class="titleText">Political Events Happening Around the Globe</div>
   			</div>
   		</div>
 		);
