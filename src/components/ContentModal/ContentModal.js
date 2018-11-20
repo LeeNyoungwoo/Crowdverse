@@ -18,7 +18,8 @@ class ContentModal extends React.Component {
 		title: 'Finally, ‘the Era of no war is coming, thanks to North Korea removing nuclear weapons', 
 		link: '', 
 		content: 'How a curmudgeonly worldview can be useful in the rambunctious world of technology?',
-		perspective: ''}
+		perspective: ''
+  }
 
   forceUpdateContent = () => {
     this.forceUpdate();
