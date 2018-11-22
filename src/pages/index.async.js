@@ -37,3 +37,6 @@ export const QnABoxAnswerBox = asyncComponent(() => import("components/eventpage
 // export const  = asyncComponent(() => import("components/eventpage/"));
 // export const  = asyncComponent(() => import("components/eventpage/"));
 // export const  = asyncComponent(() => import("components/eventpage/"));
+// export const  = asyncComponent(() => import("components/eventpage/"));
+// export const  = asyncComponent(() => import("components/eventpage/"));
+export const Loading = asyncComponent(() => import("components/Loading"));

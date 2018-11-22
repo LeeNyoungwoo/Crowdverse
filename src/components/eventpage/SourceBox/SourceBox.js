@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import "./SourceBox.scss";
-import { SourceBoxTab, SourceBoxItemPush, SourceBoxList } from "pages/index.async.js";
+import {
+  SourceBoxTab,
+  SourceBoxItemPush,
+  SourceBoxList,
+  Loading
+} from "pages/index.async.js";
 import { observer, inject } from "mobx-react";
-import fire from '../../../fire';
+import fire from "../../../fire";
 import { values } from "../../../../node_modules/mobx";
 
 //description for DB data
@@ -19,34 +24,44 @@ import { values } from "../../../../node_modules/mobx";
 //  }, ...
 // you can check details by usage of originDataList below.
 
-
 @inject("eventpage")
 @observer
 class SourceBox extends Component {
   state = {
-    currentTab: "all"
+    currentTab: "all",
+    isLoaded: false
   };
 
   componentWillMount() {
-
-    fire.database().ref('source').on('value', snapshot => {
-      console.log(snapshot.val())
-      this.props.eventpage.updateCurrentSourceDataList(snapshot.val())
-    })
+    this.getData();
     //get datalist from db and add it to the eventpage.currentSourceDataList by using eventpage.updateCurrentSourceDataList function
     // eventpage.updateCurrentSourceDataList(datalist from db)
   }
+
+  getData = async () => {
+    fire
+      .database()
+      .ref("source")
+      .on("value", snapshot => {
+        console.log(snapshot.val());
+        this.props.eventpage.updateCurrentSourceDataList(snapshot.val());
+        this.setState({ isLoaded: true });
+      });
+  };
 
   componentDidUpdate() {
     //push store data to the db using eventpage.getCurrentSourceDataList()
     // pushToDB(targetDataList: eventpage.getCurrentSourceDataList())
     // console.log(this.props.eventpage.getCurrentSourceDataList())
-    fire.database().ref('source').set(this.props.eventpage.getCurrentSourceDataList())
+    fire
+      .database()
+      .ref("source")
+      .set(this.props.eventpage.getCurrentSourceDataList());
   }
 
   forceUpdateSourceBox = () => {
     this.forceUpdate();
-  }
+  };
 
   //store있어서 딱히 필요하진 않음
   handleTabClick = clickedTab => {
@@ -93,8 +108,19 @@ class SourceBox extends Component {
           onTabClick={this.handleTabClick}
           onClickToStore={eventpage.updateCurrentTab}
         />
-        <SourceBoxItemPush currentTab={currentTab} eventName={eventName} forceUpdate={this.forceUpdateSourceBox}/>
-        <SourceBoxList dataList={dataList} />
+        <div>
+          <SourceBoxItemPush
+            currentTab={currentTab}
+            eventName={eventName}
+            forceUpdate={this.forceUpdateSourceBox}
+            isLoaded={this.state.isLoaded}
+          />
+          <SourceBoxList
+            dataList={dataList}
+            isLoaded={this.state.isLoaded}
+            Loading={<Loading width={width} height={height}/>}
+          />
+        </div>
       </div>
     );
   }
