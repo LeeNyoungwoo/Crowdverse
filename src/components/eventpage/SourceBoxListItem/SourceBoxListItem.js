@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames";
+import { ContentModal } from "pages/index.async.js";
 import "./SourceBoxListItem.scss";
 
 // event: "event1",
@@ -17,13 +18,13 @@ class SourceBoxListItem extends Component {
 
   render() {
     const { data } = this.props;
-    return (
+    const childComponent = (
       <div className={classNames("source_box_list_item_conta")}>
         <div
           className={classNames("item_wrapper")}
-          onClick={() =>
-            this.sampleAlert(`${data.title} / ${data.poster} / ${data.date}`)
-          }
+          // onClick={() =>
+          //   this.sampleAlert(`${data.title} / ${data.poster} / ${data.date}`)
+          // }
         >
           <div className={classNames("image_box")}>{data.imageSrc}</div>
           <div className={classNames("text_box")}>
@@ -37,6 +38,12 @@ class SourceBoxListItem extends Component {
             </div>
           </div>
         </div>
+      </div>
+    );
+
+    return (
+      <div>
+        <ContentModal data={data} childComponent={childComponent}/>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames";
+import { AddModal } from "pages/index.async.js";
 import "./SourceBoxItemPush.scss";
 
 class SourceBoxItemPush extends Component {
@@ -12,12 +13,14 @@ class SourceBoxItemPush extends Component {
   };
 
   render() {
-    const { currentTab,  eventName, forceUpdate, isLoaded } = this.props;
-    return (
+    const { currentTab, eventName, forceUpdate, isLoaded } = this.props;
+    const childComponent = (
       <div
         className={classNames("source_box_item_push_container")}
-        onClick={() => isLoaded ? this.sampleAlert(currentTab) : null} //여기서 모달로 currentTab,  eventName, forceUpdate 전부 전달해줘야함!
-        onMouseEnter={() => isLoaded? this.setState({ isHovered: true }) : null}
+        // onClick={() => (isLoaded ? this.sampleAlert(currentTab) : null)} //여기서 모달로 currentTab,  eventName, forceUpdate 전부 전달해줘야함!
+        onMouseEnter={() =>
+          isLoaded ? this.setState({ isHovered: true }) : null
+        }
         onMouseLeave={() => this.setState({ isHovered: false })}
       >
         <div className="desc_box">
@@ -29,6 +32,11 @@ class SourceBoxItemPush extends Component {
             </span>
           )}
         </div>
+      </div>
+    );
+    return (
+      <div>
+        <AddModal childComponent={childComponent} eventName={eventName}/>
       </div>
     );
   }

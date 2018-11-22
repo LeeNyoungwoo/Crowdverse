@@ -32,6 +32,23 @@ class SourceBox extends Component {
     isLoaded: false
   };
 
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    // console.log("nextProps.eventpage.currentSourceDataList:",nextProps.eventpage.currentSourceDataList.length)
+    // console.log("this.props.eventpage.currentSourceDataList:",this.props.eventpage.currentSourceDataList.length)
+    if (
+      nextProps.eventpage.currentSourceDataList.length !==
+        this.props.eventpage.currentSourceDataList.length ||
+      nextState.isLoaded != this.state.isLoaded
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  // componentWillUpdate( {
+  //   this.getData()
+  // })
+
   componentWillMount() {
     this.getData();
     //get datalist from db and add it to the eventpage.currentSourceDataList by using eventpage.updateCurrentSourceDataList function
@@ -43,9 +60,11 @@ class SourceBox extends Component {
       .database()
       .ref("source")
       .on("value", snapshot => {
-        console.log(snapshot.val());
+        console.log("snapshot.val()", snapshot.val());
         this.props.eventpage.updateCurrentSourceDataList(snapshot.val());
-        this.setState({ isLoaded: true });
+        this.setState({ isLoaded: true }, function() {
+          // console.log("after getData this.state.isLoaded:", this.state.isLoaded)
+        });
       });
   };
 
@@ -88,6 +107,7 @@ class SourceBox extends Component {
     const { eventpage } = this.props;
     const currentTab = eventpage.currentTab;
     const originDataList = eventpage.currentSourceDataList;
+    console.log("SourceBox originDataList: ", originDataList);
     const individualDataList = this.getIndividualDataList(originDataList);
     const officialDataList = this.getOfficialDataList(originDataList);
     const dataList =
@@ -118,7 +138,7 @@ class SourceBox extends Component {
           <SourceBoxList
             dataList={dataList}
             isLoaded={this.state.isLoaded}
-            Loading={<Loading width={width} height={height}/>}
+            Loading={<Loading width={width} height={height} />}
           />
         </div>
       </div>

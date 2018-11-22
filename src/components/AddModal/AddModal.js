@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Modal from 'react-responsive-modal';
-import './AddModal.css';
-import Form from './Form'
-import RadioForm from './RadioForm'
+import Modal from "react-responsive-modal";
+import "./AddModal.css";
+import Form from "./Form";
+import RadioForm from "./RadioForm";
 import { observer, inject } from "mobx-react";
 
 @inject("userinfo")
@@ -11,117 +11,141 @@ import { observer, inject } from "mobx-react";
 class AddModal extends React.Component {
   state = {
     open: false,
-	}
+    source: "",
+    title: "",
+    link: "",
+    content: "",
+    perspective: ""
+  };
 
-	state = {source: '', title: '', link: '', content: '', perspective: ''}
-
-  handleSourceChange = (e) => {
+  handleSourceChange = e => {
     this.setState({
-      source: e.target.value,
+      source: e.target.value
     });
-  }
+  };
 
-  handleTitleChange = (e) => {
-  	this.setState({
-  		title: e.target.value,
-  	});
-  }
+  handleTitleChange = e => {
+    this.setState({
+      title: e.target.value
+    });
+  };
 
-  handleLinkChange = (e) => {
-  	this.setState({
-  		link: e.target.value,
-  	});
-  }
+  handleLinkChange = e => {
+    this.setState({
+      link: e.target.value
+    });
+  };
 
-  handleSummaryChange = (e) => {
-  	this.setState({
-  		content: e.target.value,
-  	});
-  }
+  handleSummaryChange = e => {
+    this.setState({
+      content: e.target.value
+    });
+  };
 
-  handlePerspectiveChange = (e) => {
-  	this.setState({
-  		perspective: e.target.value,
-  	});
-  }
+  handlePerspectiveChange = e => {
+    this.setState({
+      perspective: e.target.value
+    });
+  };
 
   onOpenModal = () => {
     this.setState({ open: true });
-  }
- 
+  };
+
   onCloseModal = () => {
     this.setState({ open: false });
-  }
+  };
 
   getCurrentTimeInFormat = () => {
     var date = new Date();
     const currentDate = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()} ${date.toLocaleTimeString()}`;
     return currentDate;
-  }
+  };
 
-  handleCreate = (source, title, link, content, perspective) => {
-    const {eventpage, userinfo} = this.props;
-    console.log(eventpage.getCurrentSourceDataList())
-    eventpage.updateCurrentSourceDataList(eventpage.currentSourceDataList.push(
-    {
-      event: "sample_event",
-      sourceTab: source,
-      imageSrc: "sample_source",
-      title: title,
-      content: content,
-      poster: userinfo.getUserId(),
-      date: this.getCurrentTimeInFormat(),
-      link: link,
-    }))
-  }
- 
+  handleCreate = (eventName, source, title, link, content, perspective) => {
+    const { eventpage, userinfo } = this.props;
+    eventpage.updateCurrentSourceDataList(
+      eventpage.currentSourceDataList.push({
+        event: eventName,
+        sourceTab: source,
+        imageSrc: "sample_source",
+        title: title,
+        content: content,
+        poster: userinfo.getUserId(),
+        date: this.getCurrentTimeInFormat(),
+        link: link
+      })
+      // event: "event1",
+      // sourceTab: "individual",
+      // imageSrc: "scr",
+      // title: "individual_title_1",
+      // content: "content",
+      // poster: "poster",
+      // date: "date",
+      // link: "",
+    );
+  };
+
   render() {
     const { open } = this.state;
-    const {source, title, link, content, perspective} = this.state;
+    const { source, title, link, content, perspective } = this.state;
+    const { childComponent, eventName } = this.props;
+    console.log("handleCreate:",typeof this.props.eventpage.currentSourceDataList);
 
     return (
       <div className="example">
-        <button className="btn btn-action" onClick={this.onOpenModal}>
-          AddModal
-        </button>{' '}
+        <div className="btn btn-action" onClick={this.onOpenModal}>
+          {childComponent}
+        </div>{" "}
         <Modal open={open} onClose={this.onCloseModal} center>
-        	<div class="addmodalBox">
-        		<div class="addmodalTitleBox"><text class="addmodalTitleText">Please add new source</text></div>
+          <div class="addmodalBox">
+            <div class="addmodalTitleBox">
+              <text class="addmodalTitleText">Please add new source</text>
+            </div>
             <RadioForm
-              title='Source'
+              title="Source"
               name={source}
               onChange={this.handleSourceChange}
             />
-        		<Form
-        			placeholder= 'What is the title of source?'
-        			title='Title'
-        			name={title}
-        			value={title}
-        			onChange={this.handleTitleChange}
-        		/>
-        		<Form
-        			placeholder='URL'
-        			title='Link'
-        			name={link}
-        			value={link}
-        			onChange={this.handleLinkChange}
-        		/>
-        		<Form
-        			placeholder='Please summarize the source n 1~2 sentences'
-        			title='Summary'
-        			name={content}
-        			value={content}
-        			onChange={this.handleSummaryChange}
-        		/>
-        		<Form
-        			placeholder='Which perspective this source contatin?'
-        			title='Perspective'
-        			name={perspective}
-        			value={perspective}
-        			onChange={this.handlePerspectiveChange}
-        		/>
+            <Form
+              placeholder="What is the title of source?"
+              title="Title"
+              name={title}
+              value={title}
+              onChange={this.handleTitleChange}
+            />
+            <Form
+              placeholder="URL"
+              title="Link"
+              name={link}
+              value={link}
+              onChange={this.handleLinkChange}
+            />
+            <Form
+              placeholder="Please summarize the source n 1~2 sentences"
+              title="Summary"
+              name={content}
+              value={content}
+              onChange={this.handleSummaryChange}
+            />
+            <Form
+              placeholder="Which perspective this source contatin?"
+              title="Perspective"
+              name={perspective}
+              value={perspective}
+              onChange={this.handlePerspectiveChange}
+            />
           </div>
-          <div class="addmodalInputButtonBox"><button class="addmodalButton" onClick={()=>this.handleCreate(source, title, link, content, perspective)}>Submit</button></div>
+          <div class="addmodalInputButtonBox">
+            <button
+              class="addmodalButton"
+              onClick={() =>
+                this.handleCreate(eventName,source, title, link, content, perspective)
+              }
+            >
+              Submit
+            </button>
+          </div>
         </Modal>
       </div>
     );
