@@ -19,7 +19,7 @@ const eventName = [
   {
     category: "Culture",
     title1: "BTS deliver a speech in UN",
-    title2: "Breaking News",
+    title2: "The British Museum’s ‘Looting’ Problem",
   }
 ]
 
