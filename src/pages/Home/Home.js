@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Home.scss'
+import './Home.css'
 import header from './header.jpg';
 import korea from './Korea.png';
 import us from './US.png';
@@ -8,21 +8,18 @@ import china from './China.png';
 const eventName = [
   {
     category: "Politics",
-    title1: "The Era of No War",
-    title2: "Tax Increases",
-    title3: "Vote Rate"
+    title1: "‘Era of no war’ is coming",
+    title2: "Brexit negotiations"
   },
   {
     category: "Social",
-    title1: "#Me Too Movement",
-    title2: "Trait of Democracy",
-    title3: "Random Event"
+    title1: "Refugee crisis",
+    title2: "Me Too movement",
   },
   {
-    category: "Technology",
-    title1: "Artificial Intelligence",
+    category: "Culture",
+    title1: "BTS became the first K-pop group to deliver a speech in UN",
     title2: "Breaking News",
-    title3: "Algorithm of Google"
   }
 ]
 
@@ -95,7 +92,6 @@ class Home extends Component {
               <div class="homeeventCategoryText1">{data.category}</div>
               <div class="homeeventCategoryText2">{data.title1}</div>
               <div class="homeeventCategoryText2">{data.title2}</div>
-              <div class="homeeventCategoryText2">{data.title3}</div>
             </div>
           ))}  
         </div>
