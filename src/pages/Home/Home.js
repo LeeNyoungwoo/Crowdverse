@@ -18,7 +18,7 @@ const eventName = [
   },
   {
     category: "Culture",
-    title1: "BTS became the first K-pop group to deliver a speech in UN",
+    title1: "BTS deliver a speech in UN",
     title2: "Breaking News",
   }
 ]
