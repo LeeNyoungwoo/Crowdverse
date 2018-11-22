@@ -6,6 +6,8 @@ import { observer, inject } from "mobx-react";
 
 import eraofnowar from "../../pages/Perspective/eraofnowar.jpg";
 
+import getImage from '../../utils';
+
 @inject("userinfo")
 @inject("eventpage")
 @observer
@@ -37,6 +39,7 @@ class ContentModal extends React.Component {
   render() {
     // const { open, event, sourceTab, imageSrc, title, content, poster, date, link } = this.state;
     const { data, childComponent } = this.props;
+    const imagename = getImage(data.imageSrc);
     return (
       <div className="example">
         <div onClick={this.onOpenModal}>{childComponent}</div>{" "}
@@ -47,13 +50,15 @@ class ContentModal extends React.Component {
           center
           classNames={{ modal: "contentModalStyle" }}
         >
-          <div className="contentHeaderModalBox">
+        {(data.sourceTab === "individual") 
+          ? null 
+          : (<div className="contentHeaderModalBox">
             <div className="contentHeaderModalBoxText">{data.title}</div>
-          </div>
+          </div>)}
           <div className="contentInfoBox">
             <div className="contentInfoLeftBox">
               <div className="contentInfoLeftImageBox">
-                <img src={data.imageSrc} className="contentInfoLeftImage" />
+                <img src={imagename} className="contentInfoLeftImage" />
               </div>
             </div>
             <div class="contentInfoRightBox">

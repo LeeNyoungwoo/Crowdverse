@@ -3,21 +3,18 @@ import classNames from "classnames";
 import { ContentModal } from "pages/index.async.js";
 import "./SourceBoxListItem.css";
 
-// event: "event1",
-// sourceTab: "official",
-// imageSrc: "scr",
-// title: "official_title_1",
-// content: "content",
-// poster: "poster",
-// date: "date"
+import getImage from '../../../utils';
+
 
 class SourceBoxListItem extends Component {
+
   sampleAlert = message => {
     alert(`Hello! I am an alert box!!\nmessage: ${message}`);
   };
 
   render() {
     const { data } = this.props;
+    const imagename = getImage(data.imageSrc);
     const childComponent = (
       <div className={classNames("source_box_list_item_conta")}>
         <div
@@ -26,7 +23,7 @@ class SourceBoxListItem extends Component {
           //   this.sampleAlert(`${data.title} / ${data.poster} / ${data.date}`)
           // }
         >
-          <div className={classNames("image_box")}>{data.imageSrc}</div>
+          <div className={classNames("image_box")}>{imagename? <img src={imagename} className="source_box_image"/> : null}</div>
           <div className={classNames("text_box")}>
             <div className={classNames("content_box")}>
               <div className={classNames("title")}>{data.title}</div>
