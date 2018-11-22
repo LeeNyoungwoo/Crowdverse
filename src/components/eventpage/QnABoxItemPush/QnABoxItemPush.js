@@ -31,12 +31,14 @@ class QnABoxItemPush extends Component {
   handleSubmit = (
     eventpage,
     event,
+    nation,
     questionContent,
     questionPoster,
     questionDate
   ) => {
     eventpage.addNewQuestion(
       event,
+      nation,
       questionContent,
       questionPoster,
       questionDate
@@ -44,7 +46,7 @@ class QnABoxItemPush extends Component {
   };
 
   render() {
-    const { eventName, qnaBoxWidth, forceUpdate } = this.props;
+    const { eventName, qnaBoxWidth, forceUpdate, nation } = this.props;
     const { eventpage, userinfo } = this.props;
     return (
       <div className={classNames("qna_box_item_push_container")}>
@@ -65,6 +67,7 @@ class QnABoxItemPush extends Component {
               this.handleSubmit(
                 eventpage,
                 eventName,
+                nation,
                 this.state.value,
                 userinfo.getUserId(),
                 this.getCurrentTimeInFormat()

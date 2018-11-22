@@ -32,6 +32,7 @@ export default class EventPageStore {
       poster: "poster",
       date: "date",
       link: "",
+      perspective: "",
     },
     {
       event: "event1",
@@ -42,6 +43,7 @@ export default class EventPageStore {
       poster: "poster",
       date: "date",
       link: "",
+      perspective: "",
     },
     {
       event: "event1",
@@ -52,6 +54,7 @@ export default class EventPageStore {
       poster: "poster",
       date: "date",
       link: "",
+      perspective: "",
     }
   ];
 
@@ -74,6 +77,7 @@ export default class EventPageStore {
   @observable currentQnADataList = [
     {
       event: "event1",
+      perspective: "",
       qIndex: 0,
       questionContent: "content1",
       answerList: [
@@ -91,6 +95,7 @@ export default class EventPageStore {
     },
     {
       event: "event1",
+      perspective: "",
       qIndex: 1,
       questionContent: "content2",
       answerList: [
@@ -116,6 +121,7 @@ export default class EventPageStore {
     },
     {
       event: "event1",
+      perspective: "",
       qIndex: 2,
       questionContent: "content3",
       answerList: [
@@ -145,9 +151,10 @@ export default class EventPageStore {
   };
 
   @action
-  addNewQuestion = (event, questionContent, questionPoster, questionDate) => {
+  addNewQuestion = (event, nation, questionContent, questionPoster, questionDate) => {
     this.currentQnADataList.push({
       event: event,
+      perspective: nation,
       qIndex: this.currentQnADataList.length,
       questionContent: questionContent,
       answerList: [

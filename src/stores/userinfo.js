@@ -16,4 +16,9 @@ export default class UserInfoStore {
   getUserId = () => {
     return this.userID;
   };
+
+  getUserIdForHeader = forceUpdateHeader => {
+    forceUpdateHeader(this.userID);
+    return;
+  };
 }

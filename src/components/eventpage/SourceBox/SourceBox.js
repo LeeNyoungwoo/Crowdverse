@@ -102,11 +102,18 @@ class SourceBox extends Component {
     return individualDataList;
   };
 
+  filterByPerspective = (perspective) => {
+    const filterdDataList = this.props.eventpage.currentSourceDataList.filter(
+      data => data.perspective === perspective
+    );
+    return filterdDataList;
+  }
+
   render() {
-    const { eventName, width, height } = this.props;
+    const { eventName, width, height, nation } = this.props;
     const { eventpage } = this.props;
     const currentTab = eventpage.currentTab;
-    const originDataList = eventpage.currentSourceDataList;
+    const originDataList = this.filterByPerspective(nation);
     console.log("SourceBox originDataList: ", originDataList);
     const individualDataList = this.getIndividualDataList(originDataList);
     const officialDataList = this.getOfficialDataList(originDataList);

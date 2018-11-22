@@ -39,9 +39,16 @@ class QnABox extends Component {
   forceUpdateQnABox = () => {
     this.forceUpdate();
   };
+  
+  filterByPerspective = (perspective) => {
+    const filterdDataList = this.props.eventpage.currentQnADataList.filter(
+      data => data.perspective === perspective
+    );
+    return filterdDataList;
+  }
 
   render() {
-    const { eventName, width, height } = this.props;
+    const { eventName, width, height, nation } = this.props;
     const { eventpage } = this.props;
 
     return (
@@ -65,10 +72,11 @@ class QnABox extends Component {
               qnaBoxWidth={width}
               eventName={eventName}
               forceUpdate={this.forceUpdateQnABox}
+              nation={nation}
             />
           </div>
           <QnABoxList
-            dataList={eventpage.currentQnADataList}
+            dataList={this.filterByPerspective(nation)}
             width={width}
             height={height}
             forceUpdate={this.forceUpdateQnABox}

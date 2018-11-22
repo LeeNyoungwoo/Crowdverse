@@ -1,11 +1,6 @@
-
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import {
-  Home,
-  Perspective,
-  Event,
-} from "pages/index.async.js";
+import { Home, Perspective, Event } from "pages/index.async.js";
 import { Menu } from "components";
 import { Header } from "pages/index.async.js";
 
@@ -23,12 +18,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Menu />
+        {/*<Menu />*/}
         <Route exact path="/" component={Home} />
         <Switch>
           <Route path="/perspective/:name" component={Perspective} />
-          <Route path="/event/:name?" component={Event} />
+          <Route path="/event/:name?/:nation?" component={Event} />
         </Switch>
         {/* <Route path="/about/:name?" component={About} /> */}
         {/*<Route path="/tabs" component={Tabs} />*/}

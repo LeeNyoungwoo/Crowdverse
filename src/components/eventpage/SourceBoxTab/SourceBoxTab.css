@@ -1,36 +1,35 @@
-.source_box_list_item_conta .item_wrapper {
-  cursor: pointer;
-  margin-top: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.source_box_list_item_conta .image_box {
-  color: black;
-  width: 130px;
-  height: 130px;
-}
-.source_box_list_item_conta .text_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.source_box_list_item_conta .text_box .content_box .title {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-}
-.source_box_list_item_conta .text_box .content_box .content {
-  margin-top: 10px;
+.container {
+  margin-top: 15px;
   margin-bottom: 10px;
-  color: gray;
 }
-.source_box_list_item_conta .text_box .info_box {
+.container .tab {
+  font-size: 20px;
+}
+.container .column {
+  color: #a8a8a8;
+}
+.container .column:hover {
+  cursor: pointer;
+  color: #8d8d8d;
+}
+.container .all {
+  color: #a8a8a8;
+}
+.container .all-active {
+  font-weight: bold;
   color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 }
-.source_box_list_item_conta .text_box .info_box_poster {
-  margin-right: 20px;
+.container .official {
+  color: #a8a8a8;
+}
+.container .official-active {
+  font-weight: bold;
+  color: black;
+}
+.container .individual {
+  color: #a8a8a8;
+}
+.container .individual-active {
+  font-weight: bold;
+  color: black;
 }
