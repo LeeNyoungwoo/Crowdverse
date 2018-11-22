@@ -49,10 +49,11 @@ class Home extends Component {
   render() {
     const { userinfo } = this.props;
     const userSelection = (
-      <div className="select_user">
-        <span>
-          <strong>Select User</strong>
-        </span>
+      <div>
+      <div className="selectuserBox">
+        <div className="selectuser">Select User</div>
+      </div>
+      <div className="selectuserBox">
         <div
           className="user_name"
           onClick={() => this.changeToThisUser(userinfo, "Keon")}
@@ -78,6 +79,7 @@ class Home extends Component {
           <span>Evey</span>
         </div>
       </div>
+      </div>
     );
     return (
       <div>
@@ -92,6 +94,7 @@ class Home extends Component {
             <div className="homeupperBoxContent">
               between each person who has different cultural background
             </div>
+            <div className="homeupperBoxContent2">**You can check the event through the box at the bottom.</div>
           </div>
           <div className="homeupperImageBox">
             <img src={header} className="homeupperImage" alt="Header" />
