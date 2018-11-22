@@ -33,65 +33,65 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div class="homeupperBox">
-          <div class="homeupperTextBox">
-            <div class="homeupperBoxTitle">Welcome to CrowdVerse</div>
-            <div class='homeupperBoxContent'>We aim to fill the information gap</div>
-            <div class='homeupperBoxContent'>between each person who has different cultural background</div>
+        <div className="homeupperBox">
+          <div className="homeupperTextBox">
+            <div className="homeupperBoxTitle">Welcome to CrowdVerse</div>
+            <div className='homeupperBoxContent'>We aim to fill the information gap</div>
+            <div className='homeupperBoxContent'>between each person who has different cultural background</div>
           </div>
-          <div class="homeupperImageBox">
-            <img src={header} class="homeupperImage" alt="Header"/>
+          <div className="homeupperImageBox">
+            <img src={header} className="homeupperImage" alt="Header"/>
           </div>
         </div>
-        <div class="homeboxText">
-            <div class='homeboxTextStyle'>We have</div>
-          <div class='homeboxNumStyle'>{this.state.numTotal}</div>
-          <div class='homeboxTextStyle'>Sources in</div>
-          <div class='homeboxNumStyle'>3</div>
-          <div class='homeboxTextStyle'>different Perspectives. Enjoy!</div>
+        <div className="homeboxText">
+            <div className='homeboxTextStyle'>We have</div>
+          <div className='homeboxNumStyle'>{this.state.numTotal}</div>
+          <div className='homeboxTextStyle'>Sources in</div>
+          <div className='homeboxNumStyle'>3</div>
+          <div className='homeboxTextStyle'>different Perspectives. Enjoy!</div>
         </div>
-        <div class="homenationalBox">
-          <div class="homenationalFlagBox">
-            <div class="homenationalFlagImg">
-              <img src={korea} class="homeFlagImg" alt="Korea"/>
+        <div className="homenationalBox">
+          <div className="homenationalFlagBox">
+            <div className="homenationalFlagImg">
+              <img src={korea} className="homeFlagImg" alt="Korea"/>
             </div>
-            <div class="homenationalFlagText1">Korea</div>
-            <div class="homenationalFlagText2">{this.state.numSourceKorea}</div>
-            <div class="homenationalFlagText3">sources</div>
+            <div className="homenationalFlagText1">Korea</div>
+            <div className="homenationalFlagText2">{this.state.numSourceKorea}</div>
+            <div className="homenationalFlagText3">sources</div>
           </div>
-          <div class="homenationalFlagBox">
-            <div class="homenationalFlagImg">
-              <img src={us} class="homeFlagImg" alt="US"/>
+          <div className="homenationalFlagBox">
+            <div className="homenationalFlagImg">
+              <img src={us} className="homeFlagImg" alt="US"/>
             </div>
-            <div class="homenationalFlagText1">U.S</div>
-            <div class="homenationalFlagText2">{this.state.numSourceUS}</div>
-            <div class="homenationalFlagText3">sources</div>
+            <div className="homenationalFlagText1">U.S</div>
+            <div className="homenationalFlagText2">{this.state.numSourceUS}</div>
+            <div className="homenationalFlagText3">sources</div>
           </div>        
-          <div class="homenationalFlagBox">
-            <div class="homenationalFlagImg">
-              <img src={china} class="homeFlagImg" alt="China"/>
+          <div className="homenationalFlagBox">
+            <div className="homenationalFlagImg">
+              <img src={china} className="homeFlagImg" alt="China"/>
             </div>
-            <div class="homenationalFlagText1">China</div>
-            <div class="homenationalFlagText2">{this.state.numSourceChina}</div>
-            <div class="homenationalFlagText3">sources</div>
+            <div className="homenationalFlagText1">China</div>
+            <div className="homenationalFlagText2">{this.state.numSourceChina}</div>
+            <div className="homenationalFlagText3">sources</div>
           </div>
         </div>
-        <div class="homehrBox">
-          <hr class="homehrStyle" />
+        <div className="homehrBox">
+          <hr className="homehrStyle" />
         </div>
-        <div class="homeboxText">
-          <div class='homeboxTextStyle'>We have</div>
-          <div class='homeboxNumStyle'>8</div>
-          <div class='homeboxTextStyle'>Events in</div>
-          <div class='homeboxNumStyle'>3</div>
-          <div class='homeboxTextStyle'>Categories. You can dive in!</div>
+        <div className="homeboxText">
+          <div className='homeboxTextStyle'>We have</div>
+          <div className='homeboxNumStyle'>8</div>
+          <div className='homeboxTextStyle'>Events in</div>
+          <div className='homeboxNumStyle'>3</div>
+          <div className='homeboxTextStyle'>Categories. You can dive in!</div>
         </div>
-        <div class="homeeventBox">
-          {eventName.map((data) => (
-            <div class="homeeventRight homeeventCategoryBox">
-              <div class="homeeventCategoryText1">{data.category}</div>
-              <div class="homeeventCategoryText2">{data.title1}</div>
-              <div class="homeeventCategoryText2">{data.title2}</div>
+        <div className="homeeventBox">
+          {eventName.map((data, index) => (
+            <div key={index} className="homeeventRight homeeventCategoryBox">
+              <div className="homeeventCategoryText1">{data.category}</div>
+              <div className="homeeventCategoryText2">{data.title1}</div>
+              <div className="homeeventCategoryText2">{data.title2}</div>
             </div>
           ))}  
         </div>
