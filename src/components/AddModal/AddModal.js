@@ -61,7 +61,8 @@ class AddModal extends React.Component {
 
   handleCreate = (source, title, link, content, perspective) => {
     const {eventpage, userinfo} = this.props;
-    eventpage.updateCurrentSourceDataList(eventpage.getCurrentSourceDataList().push(
+    console.log(eventpage.getCurrentSourceDataList())
+    eventpage.updateCurrentSourceDataList(eventpage.currentSourceDataList.push(
     {
       event: "sample_event",
       sourceTab: source,

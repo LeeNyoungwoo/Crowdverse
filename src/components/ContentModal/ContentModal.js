@@ -45,11 +45,10 @@ class ContentModal extends React.Component {
         			<div class="contentHeaderModalBoxText">{title}</div>
         		</div>
         		<div class="contentContentBox">
+              <div class="contentContentLinkBox">
+                <div class="contentContentLinkText"><a href="http://www.hani.co.kr/arti/politics/defense/862798.html" target="_blank">Label</a></div>
+              </div>
         			<div class="contentContentTextBox">{content}{content}{content}{content}{content}{content}</div>
-        		</div>
-        		<div class="contentInteractionBox">
-        			<div class="contentInteractionInputBox"></div>
-        			<div class="contentInteractionUserBox"></div>
         		</div>
         	</Modal>
       	</div>

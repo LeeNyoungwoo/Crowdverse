@@ -9,9 +9,7 @@ class EventBoxListItem extends Component {
 			<div class="eventBox">
 				<div class="eventUpperBox">
 					<img src={data.imageName} class="eventUpperImageBox"/>
-					<div class="eventUpperRightBox">
-						<div class="eventUpperRightTitleBox"><span class="spanStyle">{data.title}</span></div>
-					</div>
+					<div class="eventUpperRightBox"><div class="eventUpperRightTitle"><div>{data.title}</div></div></div>
 				</div>
 				<div class="eventLowerBox">
 					<div class="eventLowerContentBox">{data.content}</div>
@@ -23,22 +21,3 @@ class EventBoxListItem extends Component {
 }
 
 export default EventBoxListItem;
-
-
-
-			// <div class="eventBox">
-			// 	<div class="eventImageBox">
-		 //   		<img src={data.imageName} class="eventImage"/>
-			// 	</div>
-			// 	<div class="eventContentBox">
-			// 		<div class="eventTitleBox">
-			// 			<div class="eventContentTitle">{data.title}</div>
-			// 		</div>
-			// 		<div class="eventContentcontentBox">
-			// 			<div class="eventContentContent">{data.content}</div>
-			// 		</div>
-			// 		<div class="eventFoldBox">
-			// 			<div class="eventFoldText">Show national diversity in this event</div>
-			// 		</div>
-			// 	</div>
-			// </div>

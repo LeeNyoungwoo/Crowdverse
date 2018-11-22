@@ -60,7 +60,7 @@ class Home extends Component {
             </div>
             <div class="homenationalFlagText1">Korea</div>
             <div class="homenationalFlagText2">{this.state.numSourceKorea}</div>
-            <div class="homenationalFlagText3">sources</div>=
+            <div class="homenationalFlagText3">sources</div>
           </div>
           <div class="homenationalFlagBox">
             <div class="homenationalFlagImg">

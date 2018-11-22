@@ -1,0 +1,54 @@
+.EventPerspectiveBox {
+	width: 100%;
+	height: 80px;
+	margin: auto;
+	display: inline-flex;
+	margin-bottom: 15px;
+	background-color: white;
+}
+.EventPerspectiveBox:hover {
+	width: 100%;
+	height: 80px;
+	margin: auto;
+	display: inline-flex;
+	margin-bottom: 15px;
+	background-color: #E0E0E0;
+}
+.EventPerspectiveImage {
+	padding-left: 3%;
+	width: 15%;
+	height: 74px;
+	float: left;
+}
+.EventPerspectiveName {
+	width: 20%;
+	height: 80px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #0D47A1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.EventPerspectivePeopleBox {
+	width: 35%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.EventPerspectiveNumText {
+	font-size: 24px;
+	font-weight: bold;
+}
+.EventPerspectiveDiscussionBox {
+	width: 40%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.otherPerspectiveText {
+	font-size: 20px;
+	padding-left: 10px;
+}

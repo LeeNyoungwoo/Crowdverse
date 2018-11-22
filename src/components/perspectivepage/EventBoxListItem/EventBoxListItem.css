@@ -3,7 +3,8 @@
 	min-height: 200px;
 	height: 100%;
 	margin: auto;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	margin-top: 15px;
 	background-color: #F5F5F5;
 }
 .eventBox:hover {
@@ -11,7 +12,7 @@
 	min-height: 200px;
 	height: 100%;
 	margin: auto;
-	margin-bottom: 30px;
+	margin-top: 15px;
 	background-color: #E0E0E0;
 }
 .eventUpperBox {
@@ -32,33 +33,22 @@
 }
 .eventUpperImageBox {
 	width: 20%;
-	height: 100%;
+	height: 130px;
 	float: left;
 }
 .eventUpperRightBox {
 	width: 80%;
-	height: 100%;
+	height: 130px;
 	float: right;
+  display: flex;
+  flex: 1;
+	flex-direction: column;
+	justify-content: center;
 }
-.eventUpperRightTitleBox {
+.eventUpperRightTitle {
 	padding-left: 25px;
-	font-size: 35px;
+	font-size: 38px;
 	font-weight: bold;
-	width: 100%;
-	height: 100%;
-}
-.eventUpperRightFoldBox {
-	padding-left: 25px;
-	font-size: 20px;
-	font-weight: bold;
-	color: #0D47A1;
-	width: 100%;
-	height: 50%;
-}
-.spanStyle {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
 }
 .eventLowerContentBox {
 	padding-top: 10px;

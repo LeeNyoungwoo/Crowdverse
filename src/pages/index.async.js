@@ -17,6 +17,8 @@ export const ContentModal = asyncComponent(() => import("components/ContentModal
 // ./Perspective
 export const EventBoxList = asyncComponent(() => import("components/perspectivepage/EventBoxList"));
 export const EventBoxListItem = asyncComponent(() => import("components/perspectivepage/EventBoxListItem"));
+export const EventPerspectiveList = asyncComponent(() => import("components/perspectivepage/EventPerspectiveList"));
+export const EventPerspectiveListItem = asyncComponent(() => import("components/perspectivepage/EventPerspectiveListItem"));
 
 // ./Compoment/ComtentModal
 export const ContentComentPush = asyncComponent(() => import("components/ContentModal/ContentComentPush"));
