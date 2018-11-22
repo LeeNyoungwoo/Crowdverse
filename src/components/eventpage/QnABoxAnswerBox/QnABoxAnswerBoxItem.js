@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import { GoThumbsup } from "react-icons/go";
-import "./QnABoxAnswerBoxItem.scss";
+import "./QnABoxAnswerBoxItem.css";
 import { observer, inject } from "mobx-react";
 
 //       {

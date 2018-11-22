@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import { ContentModal } from "pages/index.async.js";
-import "./SourceBoxListItem.scss";
+import "./SourceBoxListItem.css";
 
 // event: "event1",
 // sourceTab: "official",

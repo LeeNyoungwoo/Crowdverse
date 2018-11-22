@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./SourceBox.scss";
+import "./SourceBox.css";
 import {
   SourceBoxTab,
   SourceBoxItemPush,

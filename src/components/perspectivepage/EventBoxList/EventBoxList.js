@@ -32,7 +32,7 @@ class EventBoxList extends Component {
     const { eventList } = this.props;
     return (
       <div>
-        <div class="event_box_list_container">
+        <div className="event_box_list_container">
           {eventList.map((data) => (
             <EventBoxListItem data={data} />
           ))}

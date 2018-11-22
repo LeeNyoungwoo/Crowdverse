@@ -9,12 +9,12 @@ class BreadCrumbs extends Component {
   render() {
   	const { match } = this.props;
   	return (
-  		<div class="mainBox">
-  			<div class="breadBox">
-  				<div class="breadText">> Home > Politics  </div>
+  		<div className="mainBox">
+  			<div className="breadBox">
+  				<div className="breadText">> Home > Politics  </div>
   			</div>
-  			<div class="breadTitleBox">
-  				<div class="breadTitleText">“What is South Korea’s point of view in this event?”</div>
+  			<div className="breadTitleBox">
+  				<div className="breadTitleText">“What is South Korea’s point of view in this event?”</div>
   			</div>
   		</div>
 		);

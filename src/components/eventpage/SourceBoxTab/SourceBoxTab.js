@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { VerticalHr } from "pages/index.async.js";
 import { Column, Row } from "simple-flexbox";
 import classNames from "classnames";
-import "./SourceBoxTab.scss";
+import "./SourceBoxTab.css";
 
 class SourceBoxTab extends Component {
   state = {

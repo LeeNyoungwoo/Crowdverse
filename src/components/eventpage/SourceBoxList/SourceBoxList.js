@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import { SourceBoxListItem, Loading } from "pages/index.async.js";
-import "./SourceBoxList.scss";
+import "./SourceBoxList.css";
 
 class SourceBoxList extends Component {
   render() {
