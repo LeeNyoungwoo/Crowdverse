@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./VerticalHr.scss";
+import "./VerticalHr.css";
 
 class VerticalHr extends Component {
   render() {

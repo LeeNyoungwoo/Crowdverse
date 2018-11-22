@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { QnABoxAnswerBox } from "pages/index.async.js";
-import "./QnABoxListItem.scss";
+import "./QnABoxListItem.css";
 
 // {
 //     event: "event1",

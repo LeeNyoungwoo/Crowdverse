@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import { QnABoxListItem } from "pages/index.async.js";
-import "./QnABoxList.scss";
+import "./QnABoxList.css";
 
 class QnABoxList extends Component {
   render() {

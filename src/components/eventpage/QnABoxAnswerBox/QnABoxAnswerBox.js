@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import QnABoxAnswerBoxItem from "./QnABoxAnswerBoxItem";
 import QnABoxAnswerBoxItemPush from "./QnABoxAnswerBoxItemPush";
-import "./QnABoxAnswerBox.scss";
+import "./QnABoxAnswerBox.css";
 
 //       {
 //         answerContent: "answer1",

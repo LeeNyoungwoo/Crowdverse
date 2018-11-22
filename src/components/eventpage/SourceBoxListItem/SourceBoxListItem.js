@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./SourceBoxListItem.scss";
+import "./SourceBoxListItem.css";
 
 // event: "event1",
 // sourceTab: "official",

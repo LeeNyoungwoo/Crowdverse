@@ -1,0 +1,32 @@
+.qna_box_list_container {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.qna_box_list_container ::-webkit-scrollbar {
+  width: 10px;
+}
+.qna_box_list_container ::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+.qna_box_list_container ::-webkit-scrollbar-thumb {
+  opacity: 0.5;
+  background: #888;
+  border-radius: 10px;
+}
+.qna_box_list_container ::-webkit-scrollbar-thumb:hover {
+  opacity: 0.5;
+  background: #555;
+  border-radius: 10px;
+}
+.qna_box_list_container .list_wrapper {
+  padding-bottom: 25px;
+  border-top: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
