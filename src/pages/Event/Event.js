@@ -17,7 +17,7 @@ import { observer, inject } from "mobx-react";
 class Event extends Component {
   constructor(props) {
     super(props);
-    this.state = { width: 0, height: 0 };
+    this.state = { width: window.innerWidth, height: window.innerHeight };
     // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
