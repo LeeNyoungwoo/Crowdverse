@@ -125,6 +125,11 @@
 	height: 210px;
 	background-color: #EEEEEE;
 }
+
+.homeeventCategoryBox:hover {
+	background-color: #E0E0E0;
+}
+
 .homeeventCategoryText1 {
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -141,4 +146,9 @@
 }
 .homeeventRight {
 	margin-right: 30px;
+}
+
+.user_name :hover {
+	cursor: pointer;
+	font-weight: bold;
 }
