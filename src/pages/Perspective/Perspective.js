@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { observer, inject } from "mobx-react";
-import { BreadCrumbs, EventBoxList, AddModal, ContentModal } from "pages/index.async.js";
+import { BreadCrumbs, EventBoxList } from "pages/index.async.js";
 
 import eraofnowar from './eraofnowar.jpg';
 import brexit from './brexit.jpg';
@@ -27,8 +27,6 @@ const politicalEventList = [
 const Perspective = ({ match }) => {
   return (
     <div>
-    	<ContentModal />
-    	<AddModal />
     	<BreadCrumbs />
       <EventBoxList
         eventList={politicalEventList}
