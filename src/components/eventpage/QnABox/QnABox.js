@@ -41,7 +41,7 @@ class QnABox extends Component {
   };
 
   render() {
-    const { eventName, width, height } = this.props;
+    const { eventName, width, height, nation } = this.props;
     const { eventpage } = this.props;
 
     return (
@@ -65,6 +65,7 @@ class QnABox extends Component {
               qnaBoxWidth={width}
               eventName={eventName}
               forceUpdate={this.forceUpdateQnABox}
+              nation={nation}
             />
           </div>
           <QnABoxList

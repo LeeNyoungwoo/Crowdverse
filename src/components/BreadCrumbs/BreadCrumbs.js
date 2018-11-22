@@ -6,14 +6,30 @@ import "./BreadCrumbs.css";
 @inject("userinfo")
 @observer
 class BreadCrumbs extends Component {
+  makeUpperCategoryName = category => {
+    if (category === "Politics") {
+      return "POLITICS";
+    }
+    if (category === "Social") {
+      return "SOCIAL";
+    }
+    if (category === "Culture") {
+      return "CULTURE";
+    }
+  };
+
   render() {
-    const { match, breadCrumbs, category } = this.props;
+    const { match, breadCrumbs, category, breadTitle } = this.props;
     return (
       <div className="mainBox">
         {breadCrumbs}
         <div className="breadTitleBox">
           <div className="breadTitleText">
-            {`"What events are there in '${category}' category?"`}
+            {breadTitle
+              ? breadTitle
+              : `${this.makeUpperCategoryName(
+                  category
+                )} : Latest and breaking news nowadays`}
           </div>
         </div>
       </div>

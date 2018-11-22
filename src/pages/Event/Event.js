@@ -45,15 +45,16 @@ class Event extends Component {
   };
 
   render() {
-    console.log("screenSize:", this.state.width, this.state.height)
+    console.log("screenSize:", this.state.width, this.state.height);
     const { match } = this.props;
     const { userinfo } = this.props;
+    const nation = match.params.nation;
     const breadCrumbs = (
       <div class="breadBox">
         <div class="breadText">
           > <Link to="/">Home</Link> >{" "}
-          <Link to="/perspective/politic">Politics</Link> > ‘Era of no war’ is
-          coming
+          <Link to={`/perspective/Politics`}>Politics</Link> >{" "}
+          {`[ ‘Era of no war’ is coming ] for ${nation}`}
         </div>
       </div>
     );
@@ -61,7 +62,12 @@ class Event extends Component {
     return (
       <div>
         <Header />
-        <BreadCrumbs breadCrumbs={breadCrumbs} />
+        <BreadCrumbs
+          breadCrumbs={breadCrumbs}
+          breadTitle={`"What is ${
+            nation
+          }’s point of view in ‘Era of no war’ is coming?"`}
+        />
         {/* <h2>Event {match.params.name}</h2> */}
         <div className={classNames("eventpage_container")}>
           <Column flexGrow={1} ref={element => (this.divRef = element)}>
@@ -71,6 +77,7 @@ class Event extends Component {
                   eventName={match.params.name}
                   width={this.state.width * 0.4}
                   height={this.state.height * 0.8}
+                  nation={nation}
                 />
               </Column>
               <VerticalHr height={"700"} />
@@ -79,6 +86,7 @@ class Event extends Component {
                   eventName={match.params.name}
                   width={this.state.width * 0.4}
                   height={this.state.height * 0.8}
+                  nation={nation}
                 />
               </Column>
             </Row>

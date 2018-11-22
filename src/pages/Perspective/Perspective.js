@@ -94,7 +94,7 @@ class Perspective extends Component {
         <Header />
         <BreadCrumbs breadCrumbs={this.returnBreadCrumb(category)} category={category} />
         <EventBoxList
-          eventList={this.returnEventListOfThisCategory(category)}
+					eventList={this.returnEventListOfThisCategory(category)}
         />
       </div>
     );
