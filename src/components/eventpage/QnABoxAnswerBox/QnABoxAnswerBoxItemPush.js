@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import autosize from "autosize";
-import "./QnABoxAnswerBoxItemPush.scss";
+import "./QnABoxAnswerBoxItemPush.css";
 import { observer, inject } from "mobx-react";
 
 @inject("eventpage")

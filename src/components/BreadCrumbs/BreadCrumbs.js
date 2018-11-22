@@ -7,13 +7,13 @@ import "./BreadCrumbs.css";
 @observer
 class BreadCrumbs extends Component {
   render() {
-    const { match, breadCrumbs } = this.props;
+    const { match, breadCrumbs, category } = this.props;
     return (
-      <div class="mainBox">
+      <div className="mainBox">
         {breadCrumbs}
-        <div class="breadTitleBox">
-          <div class="breadTitleText">
-            “What is South Korea’s point of view in this event?”
+        <div className="breadTitleBox">
+          <div className="breadTitleText">
+            {`"What events are there in '${category}' category?"`}
           </div>
         </div>
       </div>

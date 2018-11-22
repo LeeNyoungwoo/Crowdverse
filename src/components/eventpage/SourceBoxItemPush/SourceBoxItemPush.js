@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import { AddModal } from "pages/index.async.js";
-import "./SourceBoxItemPush.scss";
+import "./SourceBoxItemPush.css";
 
 class SourceBoxItemPush extends Component {
   state = {

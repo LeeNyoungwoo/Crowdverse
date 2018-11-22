@@ -1,0 +1,4 @@
+.select_user .user_name :hover {
+  cursor: pointer;
+  font-weight: bold;
+}

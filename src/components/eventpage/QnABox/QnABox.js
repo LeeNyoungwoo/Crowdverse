@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { QnABoxItemPush, QnABoxList, Loading } from "pages/index.async.js";
-import "./QnABox.scss";
+import "./QnABox.css";
 import { observer, inject } from "mobx-react";
 import fire from "../../../fire";
 

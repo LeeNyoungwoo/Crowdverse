@@ -5,7 +5,7 @@ const Form = ({placeholder, title, name, value, onChange}) => {
 
 	return (
     <div className="modalForm">
-			<div class="modalinputBox"><p class="modalinputTitle">{title}</p></div>
+			<div className="modalinputBox"><p class="modalinputTitle">{title}</p></div>
       <input
         type="text"
         size="4"

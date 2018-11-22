@@ -47,13 +47,13 @@ class ContentModal extends React.Component {
           center
           classNames={{ modal: "contentModalStyle" }}
         >
-          <div class="contentHeaderModalBox">
-            <div class="contentHeaderModalBoxText">{data.title}</div>
+          <div className="contentHeaderModalBox">
+            <div className="contentHeaderModalBoxText">{data.title}</div>
           </div>
-          <div class="contentInfoBox">
-            <div class="contentInfoLeftBox">
-              <div class="contentInfoLeftImageBox">
-                <img src={data.imageSrc} class="contentInfoLeftImage" />
+          <div className="contentInfoBox">
+            <div className="contentInfoLeftBox">
+              <div className="contentInfoLeftImageBox">
+                <img src={data.imageSrc} className="contentInfoLeftImage" />
               </div>
             </div>
             <div class="contentInfoRightBox">
@@ -61,21 +61,21 @@ class ContentModal extends React.Component {
                 <div class="contentInfoRightHeader">Source Type : </div>
                 <div class="contentInfoRightContent">{data.sourceTab}</div>
               </div>
-              <div class="contentInfoRightTextBox">
-                <div class="contentInfoRightHeader">Related Event : </div>
-                <div class="contentInfoRightContent">{data.event}</div>
+              <div className="contentInfoRightTextBox">
+                <div className="contentInfoRightHeader">Related Event : </div>
+                <div className="contentInfoRightContent">{data.event}</div>
               </div>
-              <div class="contentInfoRightTextBox">
-                <div class="contentInfoRightHeader">Date : </div>
-                <div class="contentInfoRightContent">{data.date}</div>
+              <div className="contentInfoRightTextBox">
+                <div className="contentInfoRightHeader">Date : </div>
+                <div className="contentInfoRightContent">{data.date}</div>
               </div>
-              <div class="contentInfoRightTextBox">
-                <div class="contentInfoRightHeader">Writer : </div>
-                <div class="contentInfoRightContent">{data.poster}</div>
+              <div className="contentInfoRightTextBox">
+                <div className="contentInfoRightHeader">Writer : </div>
+                <div className="contentInfoRightContent">{data.poster}</div>
               </div>
-              <div class="contentInfoRightTextBox">
-                <div class="contentInfoRightHeader">Link : </div>
-                <div class="contentInfoRightContent">
+              <div className="contentInfoRightTextBox">
+                <div className="contentInfoRightHeader">Link : </div>
+                <div className="contentInfoRightContent">
                   <a href={data.link} target="_blank">
                     Go to the source
                   </a>
@@ -83,8 +83,8 @@ class ContentModal extends React.Component {
               </div>
             </div>
           </div>
-          <div class="contentContentBox">
-            <div class="contentContentTextBox">{data.content}</div>
+          <div className="contentContentBox">
+            <div className="contentContentTextBox">{data.content}</div>
           </div>
         </Modal>
       </div>

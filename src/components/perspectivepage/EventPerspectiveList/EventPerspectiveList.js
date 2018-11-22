@@ -6,7 +6,7 @@ class EventPerspectiveList extends Component {
   render() {
     const { perspectivelist } = this.props;
     return (
-      <div class="event_perspective_container">
+      <div className="event_perspective_container">
         {perspectivelist.map((data) => (
           <EventPerspectiveListItem data={data} />
         ))}

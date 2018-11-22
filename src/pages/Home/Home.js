@@ -43,7 +43,7 @@ class Home extends Component {
   changeToThisUser = (userinfo, userName) => {
     userinfo.updateUserId(userName);
     this.setState({ currentUser: userName });
-    this.forceUpdate()
+    this.forceUpdate();
   };
 
   render() {
@@ -81,7 +81,7 @@ class Home extends Component {
     );
     return (
       <div>
-        <Header userID={this.state.currentUser}/>
+        <Header userID={this.state.currentUser} />
         {userSelection}
         <div className="homeupperBox">
           <div className="homeupperTextBox">
@@ -147,26 +147,15 @@ class Home extends Component {
           <div className="homeboxTextStyle">Categories. You can dive in!</div>
         </div>
         <div className="homeeventBox">
-          {eventName.map((data, index) =>
-            data.category === "Politics" ? (
-              <Link to="/perspective/politic">
-                <div
-                  key={index}
-                  className="homeeventRight homeeventCategoryBox"
-                >
-                  <div className="homeeventCategoryText1">{data.category}</div>
-                  <div className="homeeventCategoryText2">{data.title1}</div>
-                  <div className="homeeventCategoryText2">{data.title2}</div>
-                </div>
-              </Link>
-            ) : (
-              <div key={index} className="homeeventRight homeeventCategoryBox">
+          {eventName.map((data, index) => (
+            <Link key={index} to={`/perspective/${data.category}`}>
+              <div className="homeeventRight homeeventCategoryBox">
                 <div className="homeeventCategoryText1">{data.category}</div>
                 <div className="homeeventCategoryText2">{data.title1}</div>
                 <div className="homeeventCategoryText2">{data.title2}</div>
               </div>
-            )
-          )}
+            </Link>
+          ))}
         </div>
       </div>
     );

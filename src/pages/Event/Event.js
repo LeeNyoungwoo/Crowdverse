@@ -9,7 +9,7 @@ import {
   Header
 } from "pages/index.async.js";
 import classNames from "classnames";
-import "./Event.scss";
+import "./Event.css";
 import { observer, inject } from "mobx-react";
 
 @inject("userinfo")

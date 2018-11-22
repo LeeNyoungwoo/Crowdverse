@@ -7,6 +7,8 @@ import eraofnowar from "./eraofnowar.jpg";
 import brexit from "./brexit.jpg";
 import metoo from "./metoo.png";
 import refugee from "./refugee.jpg";
+import british from "./british.jpg";
+import BTS from "./BTS.png";
 
 const headerInfo = [{}, {}];
 
@@ -27,22 +29,76 @@ const politicalEventList = [
   }
 ];
 
-const breadCrumbs = (
-  <div class="breadBox">
-    <div class="breadText">
-      > <Link to="/">Home</Link> > Politics{" "}
-    </div>
-  </div>
-);
+const socialEventList = [
+  {
+    key: 0,
+    imageName: refugee,
+    title: "Refugee crisis",
+    content:
+      "These days, problem of refugee is becoming big issue worldwide. Refugee crisis can refer to movements of large groups of displaced people, who could be either internally displaced persons, refugees or other migrants. It can also refer to incidents in the country of origin or departure, to large problems whilst on the move or even after arrival in a safe country that involve large groups of displaced persons, asylum seekers or refugees. According to the UN High Commissioner for Refugees, in 2017, 65.6 million people were forcibly displaced worldwide because of persecution, conflict, violence, or human rights violations alone."
+  },
+  {
+    key: 1,
+    imageName: metoo,
+    title: "Me Too movement",
+    content:
+      "The Me Too movement (or #MeToo movement), with many local and international alternatives, is a movement against sexual harassment and sexual assault. #MeToo spread virally in October 2017 as a hashtag used on social media in an attempt to demonstrate the widespread prevalence of sexual assault and harassment, especially in the workplace."
+  }
+];
 
-const Perspective = ({ match }) => {
-  return (
-    <div>
-      <Header />
-      <BreadCrumbs breadCrumbs={breadCrumbs} />
-      <EventBoxList eventList={politicalEventList} />
-    </div>
-  );
-};
+const cultureEventList = [
+  {
+    key: 0,
+    imageName: BTS,
+    title: "BTS deliver a speech in UN",
+    content:
+      "Leader of the seven-member boy band Kim Nam Joon spoke Monday on the importance of believing in yourself and not yielding to social pressure. His bandmates, dressed in somber suits rather than their typical flashy costumes, backed up his impassioned plea."
+  },
+  {
+    key: 1,
+    imageName: british,
+    title: "The British Museum’s ‘Looting’ Problem",
+    content:
+      "The venerable museum has 'given back' some stolen Iraqi antiquities, but that does not mean it's ready to atone for its colonial-era sins."
+  }
+];
+
+class Perspective extends Component {
+  returnBreadCrumb = category => {
+    return (
+      <div class="breadBox">
+        <div class="breadText">
+          > <Link to="/">Home</Link> > {`${category}`}
+        </div>
+      </div>
+    );
+  };
+
+  returnEventListOfThisCategory = category => {
+    if (category === "Politics") {
+      return politicalEventList;
+    }
+    if (category === "Social") {
+      return socialEventList;
+    }
+    if (category === "Culture") {
+      return cultureEventList;
+    }
+  };
+
+  render() {
+    const { match } = this.props;
+    const category = match.params.name;
+    return (
+      <div>
+        <Header />
+        <BreadCrumbs breadCrumbs={this.returnBreadCrumb(category)} category={category} />
+        <EventBoxList
+          eventList={this.returnEventListOfThisCategory(category)}
+        />
+      </div>
+    );
+  }
+}
 
 export default Perspective;

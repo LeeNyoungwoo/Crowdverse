@@ -6,13 +6,13 @@ class EventBoxListItem extends Component {
   	const { data } = this.props;
 
 		return (
-			<div class="eventBox">
-				<div class="eventUpperBox">
-					<img src={data.imageName} class="eventUpperImageBox"/>
-					<div class="eventUpperRightBox"><div class="eventUpperRightTitle"><div>{data.title}</div></div></div>
+			<div className="eventBox">
+				<div className="eventUpperBox">
+					<img src={data.imageName} className="eventUpperImageBox"/>
+					<div className="eventUpperRightBox"><div className="eventUpperRightTitle"><div>{data.title}</div></div></div>
 				</div>
-				<div class="eventLowerBox">
-					<div class="eventLowerContentBox">{data.content}</div>
+				<div className="eventLowerBox">
+					<div className="eventLowerContentBox">{data.content}</div>
 				</div>
 			</div>
 

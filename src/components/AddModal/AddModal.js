@@ -98,9 +98,9 @@ class AddModal extends React.Component {
           {childComponent}
         </div>{" "}
         <Modal open={open} onClose={this.onCloseModal} center>
-          <div class="addmodalBox">
-            <div class="addmodalTitleBox">
-              <text class="addmodalTitleText">Please add new source</text>
+          <div className="addmodalBox">
+            <div className="addmodalTitleBox">
+              <text className="addmodalTitleText">Please add new source</text>
             </div>
             <RadioForm
               title="Source"
@@ -136,9 +136,9 @@ class AddModal extends React.Component {
               onChange={this.handlePerspectiveChange}
             />
           </div>
-          <div class="addmodalInputButtonBox">
+          <div className="addmodalInputButtonBox">
             <button
-              class="addmodalButton"
+              className="addmodalButton"
               onClick={() =>
                 this.handleCreate(eventName,source, title, link, content, perspective)
               }

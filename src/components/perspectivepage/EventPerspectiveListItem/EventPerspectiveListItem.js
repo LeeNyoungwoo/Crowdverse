@@ -6,16 +6,16 @@ class EventPerspectiveListItem extends Component {
     const { data } = this.props;
 
     return (
-      <div class="EventPerspectiveBox">
-        <img src={data.nationalimg} class="EventPerspectiveImage"/>
-        <div class="EventPerspectiveName">{data.nationaltitle}</div>
-        <div class="EventPerspectivePeopleBox">
-          <div class="EventPerspectiveNumText">{data.people}</div>
-          <div class="otherPerspectiveText">people</div>
+      <div className="EventPerspectiveBox">
+        <img src={data.nationalimg} className="EventPerspectiveImage"/>
+        <div className="EventPerspectiveName">{data.nationaltitle}</div>
+        <div className="EventPerspectivePeopleBox">
+          <div className="EventPerspectiveNumText">{data.people}</div>
+          <div className="otherPerspectiveText">people</div>
         </div>
-        <div class="EventPerspectiveDiscussionBox">
-          <div class="EventPerspectiveNumText">{data.discussion}</div>
-          <div class="otherPerspectiveText">discussion</div>
+        <div className="EventPerspectiveDiscussionBox">
+          <div className="EventPerspectiveNumText">{data.discussion}</div>
+          <div className="otherPerspectiveText">discussion</div>
         </div>
       </div>
     );
