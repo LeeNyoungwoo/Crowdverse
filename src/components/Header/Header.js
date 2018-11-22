@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import user from "./user.png";
 import { observer, inject } from "mobx-react";
@@ -7,19 +8,18 @@ import { observer, inject } from "mobx-react";
 @observer
 class Header extends Component {
   state = {
-    userID:this.props.userinfo.userID
-  }
-  
+    userID: this.props.userinfo.userID
+  };
+
   // forceUpdateHeader = (userID) => {
   //   this.setState({userID:userID})
   //   // this.forceUpdate();
   // };
 
-  
   // componentWillMount() {
   //   this.state.userID = this.props.userinfo.getUserId()
   // }
-  
+
   // componentWillUpdate(nextProps, nextState) {
   //   if (nextProps.userinfo.getUserId() !== this.state.userID) {
   //     this.setState({userID:nextProps.userinfo.getUserId()})
@@ -34,20 +34,24 @@ class Header extends Component {
   // }
 
   render() {
-    const {userinfo, userID} = this.props;
-    
+    const { userinfo, userID } = this.props;
+
     return (
       <div className="headermain_Box">
-        <div className="headerlogoBox">
-          <div className="headerlogoText">CrowdVerse</div>
-        </div>
+        <Link to="/">
+          <div className="headerlogoBox">
+            <div className="headerlogoText">CrowdVerse</div>
+          </div>
+        </Link>
         <div className="headerotherBox">
           <div className="headerbuttonBox">
             <button className="headerbutton">Sign in</button>
           </div>
           <div className="headeruserBox">
             <div className="headeruserNameBox">
-              <div className="headeruserNameText">{userID ? userID : this.state.userID}</div>
+              <div className="headeruserNameText">
+                {userID ? userID : this.state.userID}
+              </div>
             </div>
             <div className="headeruserImageBox">
               <img src={user} className="headeruserImage" alt="User" />
