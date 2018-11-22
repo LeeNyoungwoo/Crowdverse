@@ -55,12 +55,12 @@ class EventBoxListItem extends Component {
             <div className="eventLowerContentBox">{data.content}</div>
           </div>
         </div>
-        {this.state.isExtended ? (
-          <EventPerspectiveList
-            perspectivelist={numofperspective}
-            eventName={eventName}
-          />
-        ) : null}
+          {this.state.isExtended ? (
+            <EventPerspectiveList
+              perspectivelist={numofperspective}
+              eventName={eventName}
+            />
+          ) : null}
       </div>
     );
   }

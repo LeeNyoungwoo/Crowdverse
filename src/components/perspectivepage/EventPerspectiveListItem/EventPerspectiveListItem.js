@@ -7,7 +7,7 @@ class EventPerspectiveListItem extends Component {
 
     return (
       <div className="EventPerspectiveBox">
-        <img src={data.nationalimg} className="EventPerspectiveImage"/>
+        <img src={data.nationalimg} className="EventPerspectiveImage" alt={data.nationalimg}/>
         <div className="EventPerspectiveName">{data.nationaltitle}</div>
         <div className="EventPerspectivePeopleBox">
           <div className="EventPerspectiveNumText">{data.people}</div>
