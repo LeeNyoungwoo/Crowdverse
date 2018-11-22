@@ -32,10 +32,10 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      numTotal: 32,
-      numSourceKorea: 19,
-      numSourceUS: 8,
-      numSourceChina: 5
+      numTotal: 11,
+      numSourceKorea: 4,
+      numSourceUS: 3,
+      numSourceChina: 4
     };
     // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -141,7 +141,7 @@ class Home extends Component {
         </div>
         <div className="homeboxText">
           <div className="homeboxTextStyle">We have</div>
-          <div className="homeboxNumStyle">8</div>
+          <div className="homeboxNumStyle">6</div>
           <div className="homeboxTextStyle">Events in</div>
           <div className="homeboxNumStyle">3</div>
           <div className="homeboxTextStyle">Categories. You can dive in!</div>

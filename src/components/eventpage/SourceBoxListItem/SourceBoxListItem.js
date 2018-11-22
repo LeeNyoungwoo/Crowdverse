@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { ContentModal } from "pages/index.async.js";
 import "./SourceBoxListItem.css";
 
-import getImage from '../../../utils';
+import getImage from 'utils';
 
 
 class SourceBoxListItem extends Component {
