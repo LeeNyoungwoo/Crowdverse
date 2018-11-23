@@ -13,7 +13,7 @@ class SourceBoxItemPush extends Component {
   };
 
   render() {
-    const { currentTab, eventName, forceUpdate, isLoaded } = this.props;
+    const { currentTab, eventName, forceUpdate, isLoaded, nation } = this.props;
     const childComponent = (
       <div
         className={classNames("source_box_item_push_container")}
@@ -36,7 +36,7 @@ class SourceBoxItemPush extends Component {
     );
     return (
       <div>
-        <AddModal childComponent={childComponent} eventName={eventName} forceUpdate={forceUpdate}/>
+        <AddModal childComponent={childComponent} eventName={eventName} forceUpdate={forceUpdate} nation={nation} />
       </div>
     );
   }

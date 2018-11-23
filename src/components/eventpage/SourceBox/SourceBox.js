@@ -141,6 +141,7 @@ class SourceBox extends Component {
             eventName={eventName}
             forceUpdate={this.forceUpdateSourceBox}
             isLoaded={this.state.isLoaded}
+            nation={nation}
           />
           <SourceBoxList
             dataList={dataList}

@@ -71,9 +71,8 @@ class AddModal extends React.Component {
     poster,
     date,
     link,
-    nation
   ) => {
-    const { eventpage, userinfo } = this.props;
+    const { eventpage, userinfo, nation } = this.props;
     eventpage.addNewSource(
       event,
       sourceTab,
@@ -103,9 +102,8 @@ class AddModal extends React.Component {
       title,
       link,
       content,
-      perspective
     } = this.state;
-    const { childComponent, eventName, userinfo, forceUpdate } = this.props;
+    const { childComponent, eventName, userinfo, forceUpdate, nation } = this.props;
     // console.log(
     //   "handleCreate:",
     //   typeof this.props.eventpage.currentSourceDataList
@@ -150,13 +148,6 @@ class AddModal extends React.Component {
               value={content}
               onChange={this.handleSummaryChange}
             />
-            <Form
-              placeholder="Which perspective this source contatin?"
-              title="Perspective"
-              name={perspective}
-              value={perspective}
-              onChange={this.handlePerspectiveChange}
-            />
           </div>
           <div className="addmodalInputButtonBox">
             <button
@@ -172,7 +163,6 @@ class AddModal extends React.Component {
                   userinfo.userID,
                   this.getCurrentTimeInFormat(),
                   link,
-                  perspective
                 );
                 forceUpdate();
                 this.onCloseModal();
