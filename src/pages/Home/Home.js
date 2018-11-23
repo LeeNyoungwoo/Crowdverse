@@ -56,27 +56,27 @@ class Home extends Component {
       <div className="selectuserBox">
         <div
           className="user_name"
-          onClick={() => this.changeToThisUser(userinfo, "Keon")}
+          onClick={() => this.changeToThisUser(userinfo, "User1")}
         >
-          <span>Keon</span>
+          <span>User1</span>
         </div>
         <div
           className="user_name"
-          onClick={() => this.changeToThisUser(userinfo, "Nyoungwoo")}
+          onClick={() => this.changeToThisUser(userinfo, "User2")}
         >
-          <span>Nyoungwoo</span>
+          <span>User2</span>
         </div>
         <div
           className="user_name"
-          onClick={() => this.changeToThisUser(userinfo, "Yoonseo")}
+          onClick={() => this.changeToThisUser(userinfo, "User3")}
         >
-          <span>Yoonseo</span>
+          <span>User3</span>
         </div>
         <div
           className="user_name"
-          onClick={() => this.changeToThisUser(userinfo, "Evey")}
+          onClick={() => this.changeToThisUser(userinfo, "User4")}
         >
-          <span>Evey</span>
+          <span>User4</span>
         </div>
       </div>
       </div>

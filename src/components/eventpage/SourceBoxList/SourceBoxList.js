@@ -5,14 +5,14 @@ import "./SourceBoxList.css";
 
 class SourceBoxList extends Component {
   render() {
-    const { dataList, isLoaded, Loading } = this.props;
+    const { dataList, isLoaded, Loading, forceUpdate } = this.props;
     return (
       <div>
         {isLoaded ? (
           <div className={classNames("source_box_list_container")}>
             <div className={classNames("list_wrapper")}>
               {dataList.map((data, index) => (
-                <SourceBoxListItem key={index} data={data} />
+                <SourceBoxListItem key={index} data={data} forceUpdate={forceUpdate}/>
               ))}
             </div>
           </div>

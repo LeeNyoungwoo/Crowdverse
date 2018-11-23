@@ -34,8 +34,24 @@
   justify-content: flex-start;
 }
 .source_box_list_item_conta .text_box .info_box_poster {
-  margin-right: 20px;
+  margin-right: 30px;
 }
+.source_box_list_item_conta .text_box .info_box_date {
+  margin-right: 30px;
+}
+.source_box_list_item_conta .text_box .info_box .edit_box {
+  color: white;
+  font-size: 15px;
+}
+
+.source_box_list_item_conta .text_box .info_box .edit_box--hover-active {
+  cursor: pointer;
+  font-size: 15px;
+}
+.source_box_list_item_conta .text_box .info_box .edit_box--hover-active:hover {
+  font-weight: bold;
+}
+
 .source_box_image{
   height: 80px;
   width: 120px;
