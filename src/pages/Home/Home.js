@@ -4,6 +4,7 @@ import header from "./header.jpg";
 import korea from "./Korea.png";
 import us from "./US.png";
 import china from "./China.png";
+import fire from "../../fire";
 import { NavLink, Link } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 import { Header } from "pages/index.async.js";
@@ -26,18 +27,54 @@ const eventName = [
   }
 ];
 
+@inject("eventpage")
 @inject("userinfo")
 @observer
 class Home extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      numTotal: 11,
-      numSourceKorea: 4,
-      numSourceUS: 3,
-      numSourceChina: 4
+      numTotal: 0,
+      numSourceKorea: 0,
+      numSourceUS: 0,
+      numSourceChina: 0
     };
     // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentWillMount() {
+    this.getData();
+
+    //get datalist from db and add it to the eventpage.currentSourceDataList by using eventpage.updateCurrentSourceDataList function
+    // eventpage.updateCurrentSourceDataList(datalist from db)
+  }
+
+  getData = async () => {
+    await fire
+      .database()
+      .ref("source")
+      .on("value", snapshot => {
+        console.log("snapshot.val()", snapshot.val());
+        this.props.eventpage.updateCurrentSourceDataList(snapshot.val());
+        this.setState({ isLoaded: true }, function() {
+        console.log("length: ", this.props.eventpage.currentSourceDataList.length)
+        this.setState({
+          numSourceKorea: this.filterByPerspective("Korea"),
+          numSourceUS: this.filterByPerspective("U.S."),
+          numSourceChina: this.filterByPerspective("China"),
+          
+        }, () => {this.setState({numTotal: this.state.numSourceKorea + this.state.numSourceChina + this.state.numSourceUS})})
+        });
+      });
+  };
+
+
+  filterByPerspective = (perspective) => {
+    const filterdDataList = this.props.eventpage.currentSourceDataList.filter(
+      data => data.perspective === perspective
+    );
+    return filterdDataList.length;
   }
 
   changeToThisUser = (userinfo, userName) => {

@@ -107,13 +107,16 @@ class AddModal extends React.Component {
               name={source}
               onChange={this.handleSourceChange}
             />
-            <Form
-              placeholder="What is the title of source?"
-              title="Title"
-              name={title}
-              value={title}
-              onChange={this.handleTitleChange}
-            />
+            {(source === "official")
+              ? <Form
+                  placeholder="What is the title of source?"
+                  title="Title"
+                  name={title}
+                  value={title}
+                  onChange={this.handleTitleChange}
+                />
+              : null
+            }
             <Form
               placeholder="URL"
               title="Link"
@@ -123,7 +126,7 @@ class AddModal extends React.Component {
             />
             <Form
               placeholder="Please summarize the source n 1~2 sentences"
-              title="Summary"
+              title= {(source === "official") ? "Summary" : "Opinion"}
               name={content}
               value={content}
               onChange={this.handleSummaryChange}
