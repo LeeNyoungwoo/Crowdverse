@@ -36,7 +36,7 @@ class SourceBoxItemPush extends Component {
     );
     return (
       <div>
-        <AddModal childComponent={childComponent} eventName={eventName}/>
+        <AddModal childComponent={childComponent} eventName={eventName} forceUpdate={forceUpdate}/>
       </div>
     );
   }

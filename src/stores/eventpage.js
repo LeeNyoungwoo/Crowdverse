@@ -1,5 +1,5 @@
 import { observable, action } from "mobx";
-import fire from '../fire';
+import fire from "../fire";
 
 //description for DB data: currentSourceDataList
 //each one of sampleListData is for each post
@@ -24,6 +24,7 @@ export default class EventPageStore {
   @observable currentTab = "all";
   @observable currentSourceDataList = [
     {
+      sIndex: "",
       event: "event1",
       sourceTab: "official",
       imageSrc: "scr",
@@ -32,9 +33,10 @@ export default class EventPageStore {
       poster: "poster",
       date: "date",
       link: "",
-      perspective: "",
+      perspective: ""
     },
     {
+      sIndex: "",
       event: "event1",
       sourceTab: "individual",
       imageSrc: "scr",
@@ -43,9 +45,10 @@ export default class EventPageStore {
       poster: "poster",
       date: "date",
       link: "",
-      perspective: "",
+      perspective: ""
     },
     {
+      sIndex: "",
       event: "event1",
       sourceTab: "official",
       imageSrc: "scr",
@@ -54,9 +57,53 @@ export default class EventPageStore {
       poster: "poster",
       date: "date",
       link: "",
-      perspective: "",
+      perspective: ""
     }
   ];
+
+  @action
+  addNewSource = (
+    event,
+    sourceTab,
+    imageSrc,
+    title,
+    content,
+    poster,
+    date,
+    link,
+    nation
+  ) => {
+    this.currentSourceDataList.push({
+      sIndex: this.currentSourceDataList.length,
+      event: event,
+      sourceTab: sourceTab,
+      imageSrc: imageSrc,
+      title: title,
+      content: content,
+      poster: poster,
+      date: date,
+      link: link,
+      perspective: nation
+    });
+  };
+
+  reOrderingSource = ()  => {
+    this.currentSourceDataList.forEach((data, index) => data.sIndex = index)
+  };
+
+  @action
+  removeSource = sIndex => {
+    this.currentSourceDataList.forEach(data =>
+      data.sIndex === sIndex
+        ? this.currentSourceDataList.indexOf(data) > -1
+          ? this.currentSourceDataList.splice(this.currentSourceDataList.indexOf(data), 1)
+          : null
+        : null
+    );
+    this.reOrderingSource();
+    console.log(this.currentSourceDataList);
+    // this.updateCurrentQnADataList(newDataList);
+  };
 
   @action
   updateCurrentTab = currentTab => {
@@ -142,7 +189,6 @@ export default class EventPageStore {
   @action
   updateCurrentQnADataList = currentQnADataList => {
     this.currentQnADataList = currentQnADataList;
-    
   };
 
   @action
@@ -151,7 +197,13 @@ export default class EventPageStore {
   };
 
   @action
-  addNewQuestion = (event, nation, questionContent, questionPoster, questionDate) => {
+  addNewQuestion = (
+    event,
+    nation,
+    questionContent,
+    questionPoster,
+    questionDate
+  ) => {
     this.currentQnADataList.push({
       event: event,
       perspective: nation,
@@ -170,8 +222,30 @@ export default class EventPageStore {
       questionPoster: questionPoster,
       questionDate: questionDate
     });
-
   };
+
+  // reOrderingQuestion = ()  => {
+  //   this.currentQnADataList.forEach(data =>
+  //     data.qIndex === qIndex
+  //       ? data.answerList.forEach((answer, index) => (answer.aIndex = index))
+  //       : null
+  //   );
+
+  // };
+
+  // @action
+  // removeQuestion = qIndex => {
+  //   this.currentSourceDataList.forEach(data =>
+  //     data.qIndex === qIndex
+  //       ? this.currentSourceDataList.indexOf(data) > -1
+  //         ? this.currentSourceDataList.splice(this.currentSourceDataList.indexOf(data), 1)
+  //         : null
+  //       : null
+  //   );
+  //   this.reOrderingQuestion();
+  //   console.log(this.currentSourceDataList);
+  //   // this.updateCurrentQnADataList(newDataList);
+  // };
 
   @action
   addNewAnswer = (qIndex, answerContent, ansPoster, ansDate) => {

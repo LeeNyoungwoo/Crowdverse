@@ -145,6 +145,7 @@ class SourceBox extends Component {
           <SourceBoxList
             dataList={dataList}
             isLoaded={this.state.isLoaded}
+            forceUpdate={this.forceUpdateSourceBox}
             Loading={<Loading width={width} height={height} />}
           />
         </div>

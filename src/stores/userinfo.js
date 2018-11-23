@@ -1,7 +1,7 @@
 import { observable, action } from "mobx";
 
 export default class UserInfoStore {
-  @observable userID = "Keon";
+  @observable userID = "User1";
 
   constructor(root) {
     this.root = root;

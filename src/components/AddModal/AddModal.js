@@ -62,35 +62,54 @@ class AddModal extends React.Component {
     return currentDate;
   };
 
-  handleCreate = (eventName, source, title, link, content, perspective) => {
+  handleCreate = (
+    event,
+    sourceTab,
+    imageSrc,
+    title,
+    content,
+    poster,
+    date,
+    link,
+    nation
+  ) => {
     const { eventpage, userinfo } = this.props;
-    eventpage.updateCurrentSourceDataList(
-      eventpage.currentSourceDataList.push({
-        event: eventName,
-        sourceTab: source,
-        imageSrc: "sample_source",
-        title: title,
-        content: content,
-        poster: userinfo.getUserId(),
-        date: this.getCurrentTimeInFormat(),
-        link: link
-      })
-      // event: "event1",
-      // sourceTab: "individual",
-      // imageSrc: "scr",
-      // title: "individual_title_1",
-      // content: "content",
-      // poster: "poster",
-      // date: "date",
-      // link: "",
+    eventpage.addNewSource(
+      event,
+      sourceTab,
+      imageSrc,
+      title,
+      content,
+      poster,
+      date,
+      link,
+      nation
     );
+    // event: "event1",
+    // sourceTab: "official",
+    // imageSrc: "scr",
+    // title: "official_title_2",
+    // content: "content",
+    // poster: "poster",
+    // date: "date",
+    // link: "",
+    // perspective: "",
   };
 
   render() {
     const { open } = this.state;
-    const { source, title, link, content, perspective } = this.state;
-    const { childComponent, eventName } = this.props;
-    console.log("handleCreate:",typeof this.props.eventpage.currentSourceDataList);
+    const {
+      source,
+      title,
+      link,
+      content,
+      perspective
+    } = this.state;
+    const { childComponent, eventName, userinfo, forceUpdate } = this.props;
+    // console.log(
+    //   "handleCreate:",
+    //   typeof this.props.eventpage.currentSourceDataList
+    // );
 
     return (
       <div className="example">
@@ -142,9 +161,22 @@ class AddModal extends React.Component {
           <div className="addmodalInputButtonBox">
             <button
               className="addmodalButton"
-              onClick={() =>
-                this.handleCreate(eventName,source, title, link, content, perspective)
-              }
+              onClick={() => {
+                //event, sourceTab, imageSrc, title, content, poster, date, link, nation
+                this.handleCreate(
+                  eventName,
+                  source,
+                  "",
+                  title,
+                  content,
+                  userinfo.userID,
+                  this.getCurrentTimeInFormat(),
+                  link,
+                  perspective
+                );
+                forceUpdate();
+                this.onCloseModal();
+              }}
             >
               Submit
             </button>
