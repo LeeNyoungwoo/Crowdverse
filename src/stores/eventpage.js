@@ -59,6 +59,21 @@ export default class EventPageStore {
   ];
 
   @action
+  addNewSource = (event, sourceTab, imageSrc, title, content, poster, date, link, nation) => {
+    this.currentSourceDataList.push({
+      event: event,
+      sourceTab: sourceTab,
+      imageSrc:imageSrc,
+      title: title,
+      content: content,
+      poster: poster,
+      date: date,
+      link: link,
+      perspective: nation,
+    });
+  };
+
+  @action
   updateCurrentTab = currentTab => {
     this.currentTab = currentTab;
   };
@@ -170,7 +185,6 @@ export default class EventPageStore {
       questionPoster: questionPoster,
       questionDate: questionDate
     });
-
   };
 
   @action
