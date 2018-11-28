@@ -17,19 +17,18 @@ import { observer, inject } from "mobx-react";
 class QnABoxAnswerBoxItem extends Component {
   state = {
     isUnfoled: false,
-    currentUser: ""
+    currentUser: "",
+    // upvote: this.props.eventpage.getUpvoteNum(this.props.qIndex, this.props.data.aIndex),
   };
 
   componentDidMount = () => {
     this.setState({ currentUser: this.props.userinfo.getUserId() });
   };
 
-  shouldComponentUpdate = (nextProps, nextState) => {
-    return nextProps.userinfo.getUserId() !== this.state.currentUser;
-  }
-
   handleUpvoteClick = (eventpage, qIndex, aIndex) => {
     eventpage.addOneUpvote(qIndex, aIndex);
+    // this.setState({upvote:this.props.eventpage.getUpvoteNum(this.props.qIndex, this.props.data.aIndex)})
+    // console.log("QnABoxAnswerBoxItem state: ", this.state)
   };
 
   handleRemove = (eventpage, qIndex, aIndex) => {
@@ -94,7 +93,7 @@ class QnABoxAnswerBoxItem extends Component {
                   forceUpdate();
                 }}
               />
-              <span>{data.upvote}</span>
+              <span>{eventpage.getUpvoteNum(qIndex, data.aIndex)}</span>
             </div>
           </div>
         </div>

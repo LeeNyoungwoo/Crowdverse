@@ -14,6 +14,7 @@ class QnABox extends Component {
     //get datalist from db and add it to the eventpage.currentQnADataList by using eventpage.updateCurrentQnADataList function
     // eventpage.updateCurrentQnADataList(datalist from db)
     this.getData();
+    this.forceUpdate();
   }
 
   getData = async () => {
@@ -21,7 +22,6 @@ class QnABox extends Component {
       .database()
       .ref("qna")
       .on("value", snapshot => {
-        console.log(snapshot.val());
         this.props.eventpage.updateCurrentQnADataList(snapshot.val());
         this.setState({ isLoaded: true });
       });
