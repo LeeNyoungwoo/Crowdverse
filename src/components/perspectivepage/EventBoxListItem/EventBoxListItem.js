@@ -4,25 +4,47 @@ import korea from "../../../pages/Home/Korea.png";
 import us from "../../../pages/Home/US.png";
 import china from "../../../pages/Home/China.png";
 import { EventPerspectiveList } from "pages/index.async.js";
+import fire from "../../../fire";
 
 const numofperspective = [
   {
     nationalimg: korea,
     nationaltitle: "Korea",
-    people: 21,
-    discussion: 23
+    people: 5,
+    discussion: 2
   },
   {
     nationalimg: us,
     nationaltitle: "U.S.",
-    people: 9,
-    discussion: 10
+    people: 4,
+    discussion: 1
   },
   {
     nationalimg: china,
     nationaltitle: "China",
-    people: 5,
-    discussion: 2
+    people: 4,
+    discussion: 0
+  }
+];
+
+const numofperspective2 = [
+  {
+    nationalimg: korea,
+    nationaltitle: "Korea",
+    people: 0,
+    discussion: 0
+  },
+  {
+    nationalimg: us,
+    nationaltitle: "U.S.",
+    people: 0,
+    discussion: 0
+  },
+  {
+    nationalimg: china,
+    nationaltitle: "China",
+    people: 0,
+    discussion: 0
   }
 ];
 
@@ -30,6 +52,7 @@ class EventBoxListItem extends Component {
   state = {
     isExtended: false
   };
+
   render() {
     const { data, eventName } = this.props;
 
@@ -57,8 +80,8 @@ class EventBoxListItem extends Component {
         </div>
           {this.state.isExtended ? (
             <EventPerspectiveList
-              perspectivelist={numofperspective}
               eventName={eventName}
+              perspectivelist={eventName === "‘Era of no war’ is coming" ? numofperspective : numofperspective2}
             />
           ) : null}
       </div>
