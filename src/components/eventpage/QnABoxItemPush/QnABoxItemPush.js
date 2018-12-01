@@ -55,7 +55,7 @@ class QnABoxItemPush extends Component {
             <textarea
               className={classNames("textarea")}
               style={{ width: qnaBoxWidth * 0.8 }}
-              placeholder=" Ask a question, feel free!"
+              placeholder=" If you have any question, fill in the blank!"
               value={this.state.value}
               onChange={event => this.handleChange(event)}
               ref={c => (this.textarea = c)}
