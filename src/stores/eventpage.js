@@ -304,4 +304,31 @@ export default class EventPageStore {
         : null
     );
   };
+
+  getUpvoteNum = (qIndex, aIndex) => {
+    let targetUpvote = 0
+    this.currentQnADataList.forEach(data =>
+
+      {
+        if (data.qIndex === qIndex) {
+          data.answerList.forEach(answer =>{
+            if (answer.aIndex === aIndex) {
+              targetUpvote = answer.upvote
+            }
+          })
+        }
+      }
+      // data.qIndex === qIndex
+      //   ? data.answerList.forEach(answer =>
+      //     answer.aIndex === aIndex ? 
+      //     answer = answer+1 : null
+      //       // answer.aIndex === aIndex ? 
+      //       //   ? (answer.upvote = answer.upvote + 1)
+      //       //   : null
+      //     )
+      //   : null
+    );
+    // console.log(targetUpvote)
+    return targetUpvote
+  }
 }
