@@ -33,7 +33,7 @@ class SourceBoxListItem extends Component {
           //   this.sampleAlert(`${data.title} / ${data.poster} / ${data.date}`)
           // }
         >
-          <div className={classNames("image_box")}>
+          <div className={classNames(`image_box${imagename? "" : "--has-image"}`)}>
             {imagename ? (
               <img src={imagename} className="source_box_image" alt={imagename}/>
             ) : null}

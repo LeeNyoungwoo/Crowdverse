@@ -12,6 +12,10 @@
   padding-right: 20px;
   padding-top: 10px;
 }
+.source_box_image{
+  height: 80px;
+  width: 120px;
+}
 .source_box_list_item_conta .text_box {
   display: flex;
   flex-direction: column;
@@ -50,9 +54,4 @@
 }
 .source_box_list_item_conta .text_box .info_box .edit_box--hover-active:hover {
   font-weight: bold;
-}
-
-.source_box_image{
-  height: 80px;
-  width: 120px;
 }
