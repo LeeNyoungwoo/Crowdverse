@@ -121,7 +121,6 @@ class Home extends Component {
     return (
       <div>
         <Header userID={this.state.currentUser} />
-        {userSelection}
         <div className="homeupperBox">
           <div className="homeupperTextBox">
             <div className="homeupperBoxTitle">Welcome to CrowdVerse</div>

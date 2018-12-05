@@ -10,20 +10,20 @@ const numofperspective = [
   {
     nationalimg: korea,
     nationaltitle: "Korea",
-    people: 5,
-    discussion: 2
+    people: 10,
+    discussion: 5
   },
   {
     nationalimg: us,
     nationaltitle: "U.S.",
-    people: 4,
-    discussion: 1
+    people: 3,
+    discussion: 2
   },
   {
     nationalimg: china,
     nationaltitle: "China",
-    people: 4,
-    discussion: 0
+    people: 5,
+    discussion: 2
   }
 ];
 
