@@ -21,7 +21,8 @@ class SourceBoxListItem extends Component {
 
   render() {
     const { data, forceUpdate } = this.props;
-    const imagename = getImage(data.imageSrc);
+    const isIndividual = data.sourceTab === "individual"
+    const imagename = isIndividual ? null : getImage(data.imageSrc);
     const { eventpage, userinfo } = this.props;
     const isCurrentUsers = data.poster === userinfo.getUserId();
 

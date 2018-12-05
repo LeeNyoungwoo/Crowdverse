@@ -60,7 +60,7 @@ class SourceBox extends Component {
       .database()
       .ref("source")
       .on("value", snapshot => {
-        console.log("snapshot.val()", snapshot.val());
+        // console.log("snapshot.val()", snapshot.val());
         this.props.eventpage.updateCurrentSourceDataList(snapshot.val());
         this.setState({ isLoaded: true }, function() {
           // console.log("after getData this.state.isLoaded:", this.state.isLoaded)
